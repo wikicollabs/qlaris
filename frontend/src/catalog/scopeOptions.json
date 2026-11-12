@@ -1,0 +1,880 @@
+{
+  "geographicScope": {
+    "Q16": {
+      "en": "Canada",
+      "id": "Kanada"
+    },
+    "Q17": {
+      "en": "Japan",
+      "id": "Jepang"
+    },
+    "Q20": {
+      "en": "Norway",
+      "id": "Norwegia"
+    },
+    "Q21": {
+      "en": "England",
+      "id": "Inggris"
+    },
+    "Q22": {
+      "en": "Scotland",
+      "id": "Skotlandia"
+    },
+    "Q25": {
+      "en": "Wales",
+      "id": "Wales"
+    },
+    "Q26": {
+      "en": "Northern Ireland",
+      "id": "Irlandia Utara"
+    },
+    "Q27": {
+      "en": "Ireland",
+      "id": "Republik Irlandia"
+    },
+    "Q28": {
+      "en": "Hungary",
+      "id": "Hungaria"
+    },
+    "Q29": {
+      "en": "Spain",
+      "id": "Spanyol"
+    },
+    "Q30": {
+      "en": "United States",
+      "id": "Amerika Serikat"
+    },
+    "Q31": {
+      "en": "Belgium",
+      "id": "Belgia"
+    },
+    "Q32": {
+      "en": "Luxembourg",
+      "id": "Luksemburg"
+    },
+    "Q33": {
+      "en": "Finland",
+      "id": "Finlandia"
+    },
+    "Q34": {
+      "en": "Sweden",
+      "id": "Swedia"
+    },
+    "Q35": {
+      "en": "Denmark",
+      "id": "Denmark"
+    },
+    "Q36": {
+      "en": "Poland",
+      "id": "Polandia"
+    },
+    "Q37": {
+      "en": "Lithuania",
+      "id": "Lituania"
+    },
+    "Q38": {
+      "en": "Italy",
+      "id": "Italia"
+    },
+    "Q39": {
+      "en": "Switzerland",
+      "id": "Swiss"
+    },
+    "Q40": {
+      "en": "Austria",
+      "id": "Austria"
+    },
+    "Q41": {
+      "en": "Greece",
+      "id": "Yunani"
+    },
+    "Q43": {
+      "en": "Turkey",
+      "id": "Turki"
+    },
+    "Q45": {
+      "en": "Portugal",
+      "id": "Portugal"
+    },
+    "Q55": {
+      "en": "Netherlands",
+      "id": "Belanda"
+    },
+    "Q77": {
+      "en": "Uruguay",
+      "id": "Uruguay"
+    },
+    "Q79": {
+      "en": "Egypt",
+      "id": "Mesir"
+    },
+    "Q96": {
+      "en": "Mexico",
+      "id": "Meksiko"
+    },
+    "Q114": {
+      "en": "Kenya",
+      "id": "Kenya"
+    },
+    "Q115": {
+      "en": "Ethiopia",
+      "id": "Etiopia"
+    },
+    "Q117": {
+      "en": "Ghana",
+      "id": "Ghana"
+    },
+    "Q142": {
+      "en": "France",
+      "id": "Prancis"
+    },
+    "Q145": {
+      "en": "United Kingdom",
+      "id": "Britania Raya"
+    },
+    "Q148": {
+      "en": "People's Republic of China",
+      "id": "Tiongkok"
+    },
+    "Q155": {
+      "en": "Brazil",
+      "id": "Brasil"
+    },
+    "Q159": {
+      "en": "Russia",
+      "id": "Rusia"
+    },
+    "Q183": {
+      "en": "Germany",
+      "id": "Jerman"
+    },
+    "Q184": {
+      "en": "Belarus",
+      "id": "Belarus"
+    },
+    "Q189": {
+      "en": "Iceland",
+      "id": "Islandia"
+    },
+    "Q191": {
+      "en": "Estonia",
+      "id": "Estonia"
+    },
+    "Q211": {
+      "en": "Latvia",
+      "id": "Latvia"
+    },
+    "Q212": {
+      "en": "Ukraine",
+      "id": "Ukraina"
+    },
+    "Q213": {
+      "en": "Czech Republic",
+      "id": "Ceko"
+    },
+    "Q214": {
+      "en": "Slovakia",
+      "id": "Slowakia"
+    },
+    "Q215": {
+      "en": "Slovenia",
+      "id": "Slovenia"
+    },
+    "Q217": {
+      "en": "Moldova",
+      "id": "Moldova"
+    },
+    "Q218": {
+      "en": "Romania",
+      "id": "Rumania"
+    },
+    "Q219": {
+      "en": "Bulgaria",
+      "id": "Bulgaria"
+    },
+    "Q221": {
+      "en": "North Macedonia",
+      "id": "Makedonia Utara"
+    },
+    "Q222": {
+      "en": "Albania",
+      "id": "Albania"
+    },
+    "Q223": {
+      "en": "Greenland",
+      "id": "Greenland"
+    },
+    "Q224": {
+      "en": "Croatia",
+      "id": "Kroasia"
+    },
+    "Q225": {
+      "en": "Bosnia and Herzegovina",
+      "id": "Bosnia dan Herzegovina"
+    },
+    "Q227": {
+      "en": "Azerbaijan",
+      "id": "Azerbaijan"
+    },
+    "Q228": {
+      "en": "Andorra",
+      "id": "Andorra"
+    },
+    "Q229": {
+      "en": "Cyprus",
+      "id": "Siprus"
+    },
+    "Q230": {
+      "en": "Georgia",
+      "id": "Georgia"
+    },
+    "Q232": {
+      "en": "Kazakhstan",
+      "id": "Kazakhstan"
+    },
+    "Q233": {
+      "en": "Malta",
+      "id": "Malta"
+    },
+    "Q235": {
+      "en": "Monaco",
+      "id": "Monako"
+    },
+    "Q236": {
+      "en": "Montenegro",
+      "id": "Montenegro"
+    },
+    "Q237": {
+      "en": "Vatican City",
+      "id": "Vatikan"
+    },
+    "Q238": {
+      "en": "San Marino",
+      "id": "San Marino"
+    },
+    "Q241": {
+      "en": "Cuba",
+      "id": "Kuba"
+    },
+    "Q242": {
+      "en": "Belize",
+      "id": "Belize"
+    },
+    "Q244": {
+      "en": "Barbados",
+      "id": "Barbados"
+    },
+    "Q252": {
+      "en": "Indonesia",
+      "id": "Indonesia"
+    },
+    "Q258": {
+      "en": "South Africa",
+      "id": "Afrika Selatan"
+    },
+    "Q262": {
+      "en": "Algeria",
+      "id": "Aljazair"
+    },
+    "Q265": {
+      "en": "Uzbekistan",
+      "id": "Uzbekistan"
+    },
+    "Q298": {
+      "en": "Chile",
+      "id": "Chili"
+    },
+    "Q334": {
+      "en": "Singapore",
+      "id": "Singapura"
+    },
+    "Q347": {
+      "en": "Liechtenstein",
+      "id": "Liechtenstein"
+    },
+    "Q398": {
+      "en": "Bahrain",
+      "id": "Bahrain"
+    },
+    "Q399": {
+      "en": "Armenia",
+      "id": "Armenia"
+    },
+    "Q403": {
+      "en": "Serbia",
+      "id": "Serbia"
+    },
+    "Q408": {
+      "en": "Australia",
+      "id": "Australia"
+    },
+    "Q414": {
+      "en": "Argentina",
+      "id": "Argentina"
+    },
+    "Q419": {
+      "en": "Peru",
+      "id": "Peru"
+    },
+    "Q423": {
+      "en": "North Korea",
+      "id": "Korea Utara"
+    },
+    "Q424": {
+      "en": "Cambodia",
+      "id": "Kamboja"
+    },
+    "Q574": {
+      "en": "Timor-Leste",
+      "id": "Timor Leste"
+    },
+    "Q657": {
+      "en": "Chad",
+      "id": "Chad"
+    },
+    "Q664": {
+      "en": "New Zealand",
+      "id": "Selandia Baru"
+    },
+    "Q668": {
+      "en": "India",
+      "id": "India"
+    },
+    "Q672": {
+      "en": "Tuvalu",
+      "id": "Tuvalu"
+    },
+    "Q678": {
+      "en": "Tonga",
+      "id": "Tonga"
+    },
+    "Q683": {
+      "en": "Samoa",
+      "id": "Samoa"
+    },
+    "Q685": {
+      "en": "Solomon Islands",
+      "id": "Kepulauan Solomon"
+    },
+    "Q686": {
+      "en": "Vanuatu",
+      "id": "Vanuatu"
+    },
+    "Q691": {
+      "en": "Papua New Guinea",
+      "id": "Papua Nugini"
+    },
+    "Q695": {
+      "en": "Palau",
+      "id": "Palau"
+    },
+    "Q697": {
+      "en": "Nauru",
+      "id": "Nauru"
+    },
+    "Q702": {
+      "en": "Federated States of Micronesia",
+      "id": "Mikronesia"
+    },
+    "Q709": {
+      "en": "Marshall Islands",
+      "id": "Kepulauan Marshall"
+    },
+    "Q710": {
+      "en": "Kiribati",
+      "id": "Kiribati"
+    },
+    "Q711": {
+      "en": "Mongolia",
+      "id": "Mongolia"
+    },
+    "Q712": {
+      "en": "Fiji",
+      "id": "Fiji"
+    },
+    "Q717": {
+      "en": "Venezuela",
+      "id": "Venezuela"
+    },
+    "Q730": {
+      "en": "Suriname",
+      "id": "Suriname"
+    },
+    "Q733": {
+      "en": "Paraguay",
+      "id": "Paraguay"
+    },
+    "Q734": {
+      "en": "Guyana",
+      "id": "Guyana"
+    },
+    "Q736": {
+      "en": "Ecuador",
+      "id": "Ekuador"
+    },
+    "Q739": {
+      "en": "Colombia",
+      "id": "Kolombia"
+    },
+    "Q750": {
+      "en": "Bolivia",
+      "id": "Bolivia"
+    },
+    "Q754": {
+      "en": "Trinidad and Tobago",
+      "id": "Trinidad dan Tobago"
+    },
+    "Q757": {
+      "en": "Saint Vincent and the Grenadines",
+      "id": "Saint Vincent dan Grenadines"
+    },
+    "Q760": {
+      "en": "Saint Lucia",
+      "id": "Saint Lucia"
+    },
+    "Q763": {
+      "en": "Saint Kitts and Nevis",
+      "id": "Saint Kitts dan Nevis"
+    },
+    "Q766": {
+      "en": "Jamaica",
+      "id": "Jamaika"
+    },
+    "Q769": {
+      "en": "Grenada",
+      "id": "Grenada"
+    },
+    "Q774": {
+      "en": "Guatemala",
+      "id": "Guatemala"
+    },
+    "Q778": {
+      "en": "The Bahamas",
+      "id": "Bahama"
+    },
+    "Q781": {
+      "en": "Antigua and Barbuda",
+      "id": "Antigua dan Barbuda"
+    },
+    "Q783": {
+      "en": "Honduras",
+      "id": "Honduras"
+    },
+    "Q784": {
+      "en": "Dominica",
+      "id": "Dominika"
+    },
+    "Q786": {
+      "en": "Dominican Republic",
+      "id": "Republik Dominika"
+    },
+    "Q790": {
+      "en": "Haiti",
+      "id": "Haiti"
+    },
+    "Q792": {
+      "en": "El Salvador",
+      "id": "El Salvador"
+    },
+    "Q794": {
+      "en": "Iran",
+      "id": "Iran"
+    },
+    "Q796": {
+      "en": "Iraq",
+      "id": "Irak"
+    },
+    "Q800": {
+      "en": "Costa Rica",
+      "id": "Kosta Rika"
+    },
+    "Q801": {
+      "en": "Israel",
+      "id": "Israel"
+    },
+    "Q804": {
+      "en": "Panama",
+      "id": "Panama"
+    },
+    "Q805": {
+      "en": "Yemen",
+      "id": "Yaman"
+    },
+    "Q810": {
+      "en": "Jordan",
+      "id": "Yordania"
+    },
+    "Q811": {
+      "en": "Nicaragua",
+      "id": "Nikaragua"
+    },
+    "Q813": {
+      "en": "Kyrgyzstan",
+      "id": "Kirgizstan"
+    },
+    "Q817": {
+      "en": "Kuwait",
+      "id": "Kuwait"
+    },
+    "Q819": {
+      "en": "Laos",
+      "id": "Laos"
+    },
+    "Q822": {
+      "en": "Lebanon",
+      "id": "Lebanon"
+    },
+    "Q826": {
+      "en": "Maldives",
+      "id": "Maladewa"
+    },
+    "Q833": {
+      "en": "Malaysia",
+      "id": "Malaysia"
+    },
+    "Q836": {
+      "en": "Myanmar",
+      "id": "Myanmar"
+    },
+    "Q837": {
+      "en": "Nepal",
+      "id": "Nepal"
+    },
+    "Q842": {
+      "en": "Oman",
+      "id": "Oman"
+    },
+    "Q843": {
+      "en": "Pakistan",
+      "id": "Pakistan"
+    },
+    "Q846": {
+      "en": "Qatar",
+      "id": "Qatar"
+    },
+    "Q851": {
+      "en": "Saudi Arabia",
+      "id": "Arab Saudi"
+    },
+    "Q854": {
+      "en": "Sri Lanka",
+      "id": "Sri Lanka"
+    },
+    "Q858": {
+      "en": "Syria",
+      "id": "Suriah"
+    },
+    "Q863": {
+      "en": "Tajikistan",
+      "id": "Tajikistan"
+    },
+    "Q865": {
+      "en": "Taiwan",
+      "id": "Taiwan"
+    },
+    "Q869": {
+      "en": "Thailand",
+      "id": "Thailand"
+    },
+    "Q874": {
+      "en": "Turkmenistan",
+      "id": "Turkmenistan"
+    },
+    "Q878": {
+      "en": "United Arab Emirates",
+      "id": "Uni Emirat Arab"
+    },
+    "Q881": {
+      "en": "Vietnam",
+      "id": "Vietnam"
+    },
+    "Q884": {
+      "en": "South Korea",
+      "id": "Korea Selatan"
+    },
+    "Q889": {
+      "en": "Afghanistan",
+      "id": "Afganistan"
+    },
+    "Q902": {
+      "en": "Bangladesh",
+      "id": "Bangladesh"
+    },
+    "Q912": {
+      "en": "Mali",
+      "id": "Mali"
+    },
+    "Q916": {
+      "en": "Angola",
+      "id": "Angola"
+    },
+    "Q917": {
+      "en": "Bhutan",
+      "id": "Bhutan"
+    },
+    "Q921": {
+      "en": "Brunei",
+      "id": "Brunei"
+    },
+    "Q924": {
+      "en": "Tanzania",
+      "id": "Tanzania"
+    },
+    "Q928": {
+      "en": "Philippines",
+      "id": "Filipina"
+    },
+    "Q929": {
+      "en": "Central African Republic",
+      "id": "Republik Afrika Tengah"
+    },
+    "Q945": {
+      "en": "Togo",
+      "id": "Togo"
+    },
+    "Q948": {
+      "en": "Tunisia",
+      "id": "Tunisia"
+    },
+    "Q953": {
+      "en": "Zambia",
+      "id": "Zambia"
+    },
+    "Q954": {
+      "en": "Zimbabwe",
+      "id": "Zimbabwe"
+    },
+    "Q958": {
+      "en": "South Sudan",
+      "id": "Sudan Selatan"
+    },
+    "Q962": {
+      "en": "Benin",
+      "id": "Benin"
+    },
+    "Q963": {
+      "en": "Botswana",
+      "id": "Botswana"
+    },
+    "Q965": {
+      "en": "Burkina Faso",
+      "id": "Burkina Faso"
+    },
+    "Q967": {
+      "en": "Burundi",
+      "id": "Burundi"
+    },
+    "Q970": {
+      "en": "Comoros",
+      "id": "Komoro"
+    },
+    "Q971": {
+      "en": "Republic of the Congo",
+      "id": "Republik Kongo"
+    },
+    "Q974": {
+      "en": "Democratic Republic of the Congo",
+      "id": "Republik Demokratik Kongo"
+    },
+    "Q977": {
+      "en": "Djibouti",
+      "id": "Jibuti"
+    },
+    "Q983": {
+      "en": "Equatorial Guinea",
+      "id": "Guinea Khatulistiwa"
+    },
+    "Q986": {
+      "en": "Eritrea",
+      "id": "Eritrea"
+    },
+    "Q1000": {
+      "en": "Gabon",
+      "id": "Gabon"
+    },
+    "Q1005": {
+      "en": "The Gambia",
+      "id": "Gambia"
+    },
+    "Q1006": {
+      "en": "Guinea",
+      "id": "Guinea"
+    },
+    "Q1007": {
+      "en": "Guinea-Bissau",
+      "id": "Guinea-Bissau"
+    },
+    "Q1008": {
+      "en": "Ivory Coast",
+      "id": "Pantai Gading"
+    },
+    "Q1009": {
+      "en": "Cameroon",
+      "id": "Kamerun"
+    },
+    "Q1011": {
+      "en": "Cape Verde",
+      "id": "Tanjung Verde"
+    },
+    "Q1013": {
+      "en": "Lesotho",
+      "id": "Lesotho"
+    },
+    "Q1014": {
+      "en": "Liberia",
+      "id": "Liberia"
+    },
+    "Q1016": {
+      "en": "Libya",
+      "id": "Libya"
+    },
+    "Q1019": {
+      "en": "Madagascar",
+      "id": "Madagaskar"
+    },
+    "Q1020": {
+      "en": "Malawi",
+      "id": "Malawi"
+    },
+    "Q1025": {
+      "en": "Mauritania",
+      "id": "Mauritania"
+    },
+    "Q1027": {
+      "en": "Mauritius",
+      "id": "Mauritius"
+    },
+    "Q1028": {
+      "en": "Morocco",
+      "id": "Maroko"
+    },
+    "Q1029": {
+      "en": "Mozambique",
+      "id": "Mozambik"
+    },
+    "Q1030": {
+      "en": "Namibia",
+      "id": "Namibia"
+    },
+    "Q1032": {
+      "en": "Niger",
+      "id": "Niger"
+    },
+    "Q1033": {
+      "en": "Nigeria",
+      "id": "Nigeria"
+    },
+    "Q1036": {
+      "en": "Uganda",
+      "id": "Uganda"
+    },
+    "Q1037": {
+      "en": "Rwanda",
+      "id": "Rwanda"
+    },
+    "Q1039": {
+      "en": "São Tomé and Príncipe",
+      "id": "Sao Tome dan Principe"
+    },
+    "Q1041": {
+      "en": "Senegal",
+      "id": "Senegal"
+    },
+    "Q1042": {
+      "en": "Seychelles",
+      "id": "Seychelles"
+    },
+    "Q1044": {
+      "en": "Sierra Leone",
+      "id": "Sierra Leone"
+    },
+    "Q1045": {
+      "en": "Somalia",
+      "id": "Somalia"
+    },
+    "Q1049": {
+      "en": "Sudan",
+      "id": "Sudan"
+    },
+    "Q1050": {
+      "en": "Eswatini",
+      "id": "Eswatini"
+    },
+    "Q1246": {
+      "en": "Kosovo",
+      "id": "Kosovo"
+    },
+    "Q4628": {
+      "en": "Faroe Islands",
+      "id": "Kepulauan Faroe"
+    },
+    "Q8646": {
+      "en": "Hong Kong",
+      "id": "Hong Kong"
+    },
+    "Q14773": {
+      "en": "Macau",
+      "id": "Makau"
+    },
+    "Q17012": {
+      "en": "Guadeloupe",
+      "id": "Guadeloupe"
+    },
+    "Q17054": {
+      "en": "Martinique",
+      "id": "Pulau Martinik"
+    },
+    "Q17070": {
+      "en": "Réunion",
+      "id": "Réunion"
+    },
+    "Q21203": {
+      "en": "Aruba",
+      "id": "Aruba"
+    },
+    "Q25279": {
+      "en": "Curaçao",
+      "id": "Curaçao"
+    },
+    "Q26273": {
+      "en": "Sint Maarten",
+      "id": "Sint Maarten"
+    },
+    "Q26988": {
+      "en": "Cook Islands",
+      "id": "Kepulauan Cook"
+    },
+    "Q29999": {
+      "en": "Kingdom of the Netherlands",
+      "id": "Kerajaan Belanda"
+    },
+    "Q33788": {
+      "en": "New Caledonia",
+      "id": "Kaledonia Baru"
+    },
+    "Q34020": {
+      "en": "Niue",
+      "id": "Niue"
+    },
+    "Q36823": {
+      "en": "Tokelau",
+      "id": "Tokelau"
+    },
+    "Q129003": {
+      "en": "French Southern and Antarctic Lands",
+      "id": "Daratan Selatan dan Antarktika Perancis"
+    },
+    "Q161258": {
+      "en": "Clipperton Island",
+      "id": "Pulau Clipperton"
+    },
+    "Q219060": {
+      "en": "Palestine",
+      "id": "Palestina"
+    },
+    "Q756617": {
+      "en": "Kingdom of Denmark",
+      "id": "Kerajaan Denmark"
+    }
+  }
+}
