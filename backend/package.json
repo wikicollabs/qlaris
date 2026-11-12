@@ -1,0 +1,26 @@
+{
+  "name": "@qlaris/backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --import tsx ./node_modules/tsx/dist/cli.mjs watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=26.12.1 <27"
+  },
+  "dependencies": {
+    "express": "^5.3.0",
+    "iron-session": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3"
+  },
+  "license": "GPL-2.0-or-later"
+}
