@@ -2,6 +2,12 @@ import { createHash, randomBytes } from 'node:crypto';
 import { Router } from 'express';
 import { getSession } from './session.js';
 
+const FRONTEND_URL = process.env.FRONTEND_URL;
+
+if (!FRONTEND_URL) {
+  throw new Error('FRONTEND_URL must be configured.');
+}
+
 export const authRouter = Router();
 
 const authorizationEndpoint =
@@ -181,9 +187,7 @@ authRouter.get('/callback', async (req, res) => {
     delete session.codeVerifier;
     await session.save();
 
-    const frontendUrl = new URL(
-      process.env.FRONTEND_URL ?? 'http://localhost:5173',
-    );
+    const frontendUrl = new URL(FRONTEND_URL);
     frontendUrl.searchParams.set('auth_error', 'access_denied');
 
     res.redirect(frontendUrl.toString());
@@ -216,16 +220,14 @@ authRouter.get('/callback', async (req, res) => {
 
     await session.save();
 
-    res.redirect(process.env.FRONTEND_URL ?? 'http://localhost:5173');
+    res.redirect(FRONTEND_URL);
   } catch (error) {
     console.error(
       'Wikimedia authentication failed:',
       error instanceof Error ? error.message : 'Unknown error',
     );
 
-    const frontendUrl = new URL(
-      process.env.FRONTEND_URL ?? 'http://localhost:5173',
-    );
+    const frontendUrl = new URL(FRONTEND_URL);
     frontendUrl.searchParams.set('auth_error', 'oauth_failed');
 
     res.redirect(frontendUrl.toString());
@@ -307,7 +309,7 @@ authRouter.post('/logout', async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
 
   const allowedOrigin = new URL(
-    process.env.FRONTEND_URL ?? 'http://localhost:5173',
+    FRONTEND_URL,
   ).origin;
 
   if (req.get('Origin') !== allowedOrigin) {

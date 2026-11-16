@@ -2,6 +2,9 @@
   "name": "qlaris",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "build": "pnpm --filter @qlaris/frontend build && pnpm --filter @qlaris/backend build"
+  },
   "license": "GPL-2.0-or-later",
   "packageManager": "pnpm@12.15.0",
   "engines": {

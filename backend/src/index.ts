@@ -7,10 +7,17 @@ import {
 import { discoverAlbums } from './discovery.js';
 import { authRouter } from './auth.js';
 import { fetchWikidataItem } from './wikidata.js';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const app = express();
 app.use('/api/auth', authRouter);
-const port = 3000;
+const port = Number(process.env.PORT);
+
+if (!Number.isInteger(port) || port < 1 || port > 65535) {
+  throw new Error('PORT must be a valid port number.');
+}
+
 const targetProperties = ['P1476', 'P577', 'P264', 'P407'] as const;
 
 interface WikidataStatement {
@@ -284,6 +291,23 @@ app.get('/api/items/:id/cover-art', async (req, res) => {
   }
 });
 
+const frontendDist = fileURLToPath(
+  new URL('../../frontend/dist/', import.meta.url)
+);
+
+app.use('/api', (_req, res) => {
+  res.status(404).json({
+    error: 'not_found',
+    message: 'API endpoint not found.',
+  });
+});
+
+app.use(express.static(frontendDist));
+
+app.get('/{*splat}', (_req, res) => {
+  res.sendFile(join(frontendDist, 'index.html'));
+});
+
 app.listen(port, () => {
-  console.log(`Backend running at http://localhost:${port}`);
+  console.log(`Backend listening on port ${port}`);
 });
