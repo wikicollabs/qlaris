@@ -14,7 +14,7 @@ async function queryWdqs(query: string): Promise<unknown> {
       'User-Agent': 'Qlaris/0.1.0 (https://github.com/wikicollabs/qlaris)',
       Accept: 'application/sparql-results+json',
     },
-    signal: AbortSignal.timeout(10000),
+    signal: AbortSignal.timeout(30000),
   });
 
   if (!response.ok) {
