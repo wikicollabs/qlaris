@@ -100,6 +100,10 @@ const start = () =>
   text-align: center;
 }
 
+.home-view__start:disabled .home-view__start-label {
+  color: inherit;
+}
+
 /* HOME VIEW - TABLET POTRAIT & DESKTOP */
 @media (min-width: 640px) {
   .home-view {
@@ -116,7 +120,6 @@ const start = () =>
   animation-timing-function: var(--transition-timing-function-system);
 }
 
-/* Home to card: fade out all but the selected category, hold, then morph it into the card. 200ms each. */
 :root.vt-open-card {
   --vt-fade-duration: 200ms;
   --vt-hold-duration: 200ms;

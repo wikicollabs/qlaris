@@ -300,6 +300,15 @@ const {
   z-index: 3;
 }
 
+.card-view__ghost--dissolve {
+  z-index: 5;
+}
+
+.card-view__ghost--backdrop {
+  z-index: 3;
+  background: var(--background-color-base);
+}
+
 .card-view__result {
   display: flex;
   flex: 1 0 0;

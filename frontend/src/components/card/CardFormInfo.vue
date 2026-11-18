@@ -1,5 +1,8 @@
 <template>
-  <header :class="['card-view__item', { 'card-view__item--open': isInfoOpen }]">
+  <header
+    :class="['card-view__item', { 'card-view__item--open': isInfoOpen }]"
+    @pointerdown="onHeaderPointerDown"
+  >
     <div class="card-view__item-text">
       <h4 :class="['card-view__heading', { 'card-view__entity--collapsed': !isInfoOpen }]">
         <span class="card-view__entity-text">{{ titleParts.textPart }}</span>
@@ -88,6 +91,7 @@ const {
   subtitleParts,
   details,
   toggleInfo,
+  onHeaderPointerDown,
 } = inject('cardView');
 </script>
 
@@ -150,6 +154,8 @@ const {
   color: var(--color-inverted-fixed);
   overflow: hidden;
   transition: padding-block-end var(--item-duration) var(--item-ease);
+  touch-action: none;
+  user-select: none;
 }
 
 .card-view__item--open {
@@ -157,6 +163,8 @@ const {
   min-height: 0;
   padding-block-end: 0;
   overflow-y: auto;
+  touch-action: pan-y;
+  user-select: auto;
 }
 
 .card-view__item-text {

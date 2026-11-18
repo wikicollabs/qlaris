@@ -37,7 +37,9 @@ import {
   splitEntityLabel,
 } from './CardViewHelpers';
 import { useCardChanges } from './UseCardChanges';
+import { useCardDissolve } from './UseCardDissolve';
 import { useCardEditor } from './UseCardEditor';
+import { useCardExpand } from './UseCardExpand';
 import { useCardSkip } from './UseCardSkip';
 
 export function useCardView(props, emit) {
@@ -159,12 +161,13 @@ export function useCardView(props, emit) {
     focusById(NEXT_BUTTON_ID);
   };
 
-  const showCover = () => {
+  const showCover = (revealAt = 0) => {
     clearTimeout(coverTimer);
     phase.value = 'cover';
+    const wait = Math.max(0, revealAt - performance.now());
     coverTimer = setTimeout(() => {
       phase.value = 'form';
-    }, COVER_DURATION);
+    }, wait + COVER_DURATION);
     timers.push(coverTimer);
   };
 
@@ -187,13 +190,15 @@ export function useCardView(props, emit) {
     });
   };
 
+  const { expand, collapse } = useCardExpand({ cardRef });
+
   const {
     resetEdit,
     snapshotEditor,
     restoreEditor,
     initialValues,
     ...editor
-  } = useCardEditor({ card, cardNumber, isPreview, timers });
+  } = useCardEditor({ card, cardNumber, isPreview, timers, expand, collapse });
 
   const changes = useCardChanges({
     savedTitle: editor.savedTitle,
@@ -202,7 +207,7 @@ export function useCardView(props, emit) {
     initialValues,
   });
 
-  const { advance, ...skipApi } = useCardSkip({
+  const { advance, isBusy, ...skipApi } = useCardSkip({
     cardRef,
     contentRef,
     cardNumber,
@@ -219,12 +224,14 @@ export function useCardView(props, emit) {
     resetEdit,
     snapshotEditor,
     restoreEditor,
-    onAdvance: (number) => loadDiscoveredItem(number),
+    onAdvance: (number, revealAt) => loadDiscoveredItem(number, revealAt),
     onUndo: () => {
       navigationController?.abort();
       clearCover();
     },
   });
+
+  useCardDissolve({ cardRef, contentRef, phase, isPreview, submission, isBusy });
 
   const preloadCoverImage = (url, signal) =>
     new Promise((resolve, reject) => {
@@ -356,7 +363,7 @@ export function useCardView(props, emit) {
     processPrefetchQueue();
   };
 
-  const loadDiscoveredItem = async (number) => {
+  const loadDiscoveredItem = async (number, revealAt = 0) => {
     clearCover();
     navigationController?.abort();
 
@@ -395,7 +402,7 @@ export function useCardView(props, emit) {
       currentCoverArt.value = coverArt;
       resetEdit();
 
-      showCover();
+      showCover(revealAt);
       prefetchUpcomingItems(number);
     } catch (error) {
       if (signal.aborted || isUnmounted) return;

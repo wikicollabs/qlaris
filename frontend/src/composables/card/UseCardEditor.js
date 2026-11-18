@@ -2,8 +2,6 @@ import { computed, nextTick, onBeforeUnmount, onMounted, reactive, ref, toRef } 
 import {
   CURRENT_YEAR,
   DATE_PATTERN,
-  EDITOR_DURATION,
-  EDITOR_EASE,
   MAX_YEAR,
   MIN_YEAR,
   PICKER_BUTTON_ID,
@@ -15,7 +13,6 @@ import {
   titleLanguages,
 } from './CardViewConfig';
 import {
-  animate,
   createInitialValues,
   fieldId,
   focusById,
@@ -26,7 +23,7 @@ import {
 import { translate } from '../../locale';
 import { createStatementValues } from './CardStatementHelpers';
 
-export function useCardEditor({ card, cardNumber, isPreview, timers }) {
+export function useCardEditor({ card, cardNumber, isPreview, timers, expand, collapse }) {
   const precisionOptions = [
     { value: 'year', label: translate('card-precision-year') },
     { value: 'month', label: translate('card-precision-month') },
@@ -82,7 +79,13 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
 
   const canSubmitList = computed(() => listChips.value.length > 0);
 
-  const canSubmit = computed(() => titleInput.value.trim() !== '' && titleLanguage.value !== null);
+  const selectedTitleLanguage = computed(() =>
+    titleLanguages.find(({ value }) => value === titleLanguage.value) ?? null
+  );
+
+  const canSubmit = computed(() =>
+    titleInput.value.trim() !== '' && selectedTitleLanguage.value !== null
+  );
 
   const titleError = computed(() => isTitleTouched.value && titleInput.value.trim() === '');
 
@@ -165,26 +168,14 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
     titleSuggestions.value = buildTitleSuggestions();
   };
 
-  const introduceEditor = async () => {
-    await nextTick();
-
-    const editor = document.querySelector('.card-view__editor');
-    if (!editor) return;
-
-    animate(editor, [{ transform: 'translateY(100%)' }, { transform: 'none' }], {
-      duration: EDITOR_DURATION,
-      easing: EDITOR_EASE,
-    });
-  };
-
   const startEditing = (container) => {
-    introduceEditor();
     focusFirstControl(container);
   };
 
   const openEdit = () => {
+    expand(titleField.property);
     titleInput.value = savedTitle.value?.text ?? '';
-    titleLanguage.value = savedTitle.value?.language.value ?? null;
+    titleLanguage.value = savedTitle.value?.language?.value ?? savedTitle.value?.language ?? null;
     titleSelection.value = null;
     titleSuggestions.value = buildTitleSuggestions();
     isTitleTouched.value = false;
@@ -194,6 +185,7 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
   };
 
   const closeEdit = () => {
+    collapse(titleField.property);
     isEditing.value = false;
     focusById(fieldId(titleField.property));
   };
@@ -202,7 +194,7 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
     if (!canSubmit.value) return;
     savedTitle.value = {
       text: titleInput.value.trim(),
-      language: titleLanguages.find(({ value }) => value === titleLanguage.value),
+      language: selectedTitleLanguage.value,
     };
     closeEdit();
   };
@@ -224,6 +216,7 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
   };
 
   const openDateEdit = () => {
+    expand(dateField.property);
     const now = new Date();
     const saved = savedDate.value;
     datePrecision.value = saved?.precision ?? 'year';
@@ -238,6 +231,7 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
   };
 
   const closeDateEdit = () => {
+    collapse(dateField.property);
     isDateEditing.value = false;
     focusById(fieldId(dateField.property));
   };
@@ -253,6 +247,7 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
   };
 
   const openListEdit = (field) => {
+    expand(field.property);
     const saved = savedLists[field.property];
     listChips.value = saved ? saved.chips.map((chip) => ({ ...chip })) : [];
     listSelected.value = saved ? [...saved.selected] : [];
@@ -264,6 +259,7 @@ export function useCardEditor({ card, cardNumber, isPreview, timers }) {
 
   const closeListEdit = () => {
     const property = editingList.value?.property;
+    collapse(property);
     editingList.value = null;
     focusById(fieldId(property));
   };
