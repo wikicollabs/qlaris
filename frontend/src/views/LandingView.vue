@@ -115,7 +115,6 @@ onBeforeUnmount(stopGuard);
 }
 
 .landing__login {
-  gap: var(--spacing-25);
   width: 10rem;
   padding: var(--spacing-6) var(--spacing-100);
 }

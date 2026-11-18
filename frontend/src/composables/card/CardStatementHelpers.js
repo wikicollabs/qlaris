@@ -86,11 +86,6 @@ const parseList = (statements, item) => {
   return { chips, selected, text: chips.map(({ label }) => label).join(', ') };
 };
 
-/**
- * Convert Wikidata statements into the current editor's value format.
- * For single-value fields, prefer a valid preferred-rank statement over normal rank.
- * Report properties with active statements that cannot be represented.
- */
 export const createStatementValues = (item) => {
   const values = { title: null, date: null, lists: {} };
   const unsupported = [];

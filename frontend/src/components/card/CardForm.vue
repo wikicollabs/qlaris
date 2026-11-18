@@ -30,7 +30,7 @@
             <div v-if="field === titleField && savedTitle" class="card-view__value">
               <div class="card-view__value-text">
                 <p class="card-view__text card-view__value-title">{{ savedTitle.text }}</p>
-                <p class="card-view__caption card-view__value-caption">{{ savedTitle.language.label }}</p>
+                <p class="card-view__caption card-view__value-caption">{{ savedTitle.language?.label ?? savedTitle.language?.value ?? '' }}</p>
               </div>
               <cdx-button
                 :id="fieldId(field.property)"

@@ -8,7 +8,7 @@
       'cdx-select-with-search--expanded': isExpanded,
       'cdx-select-with-search--flipped': isFlippedAbove,
     }"
-    @focusin="isFocused = true"
+    @focusin="onFocusIn"
     @focusout="onFocusOut"
   >
     <div class="cdx-select-with-search__trigger-stack">
@@ -153,11 +153,7 @@ const menuId = useId();
 
 let stopAutoUpdate = null;
 
-const visualStatus = computed(() =>
-  isExpanded.value || isFocused.value
-    ? 'default'
-    : props.status
-);
+const visualStatus = computed(() => props.status);
 
 const selectedLabel = computed(() => {
   const selectedItem = props.menuItems.find(
@@ -264,6 +260,12 @@ function onMenuToggle(event) {
   stopMenuAutoUpdate();
 }
 
+function onFocusIn() {
+  if (isFocused.value) return;
+  isFocused.value = true;
+  emit('focus');
+}
+
 function openMenu() {
   if (props.disabled || isExpanded.value || !menuEl.value) {
     return;
@@ -362,8 +364,12 @@ function onFocusOut(event) {
     return;
   }
 
-  isFocused.value = false;
-  emit('blur');
+  nextTick(() => {
+    if (wrapperRef.value?.contains(document.activeElement)) return;
+    if (!isFocused.value) return;
+    isFocused.value = false;
+    emit('blur');
+  });
 }
 
 onBeforeUnmount(() => {

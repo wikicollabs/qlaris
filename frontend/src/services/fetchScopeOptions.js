@@ -2,7 +2,6 @@ const FALLBACK_LANG = 'en';
 
 let cachePromise = null;
 
-// Loaded lazily so the large JSON stays out of the main bundle
 const loadCache = () => {
   cachePromise ??= import('../catalog/scopeOptions.json')
     .then((module) => module.default)
@@ -28,7 +27,6 @@ export const fetchScopeOptions = async (scopeId, lang = FALLBACK_LANG) => {
     return [];
   }
 
-  // Intl.Collator throws on malformed language tags
   let collator;
   try {
     collator = new Intl.Collator(lang);

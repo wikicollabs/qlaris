@@ -1,13 +1,22 @@
 import { nextTick, onBeforeUnmount, ref } from 'vue';
 import {
-  SKIP_EASE_IN,
-  SKIP_EASE_OUT,
+  DISSOLVE_DURATION,
+  SKIP_BOUNCE_DURATION,
+  SKIP_DRAG_DISTANCE,
+  SKIP_DRAG_DURATION,
+  SKIP_DRAG_RESISTANCE,
+  SKIP_DRAG_RESISTANCE_RANGE,
+  SKIP_DRAG_THRESHOLD,
+  SKIP_DRAG_VELOCITY,
+  SKIP_DURATION,
+  SKIP_EASE,
+  SKIP_ROTATION,
   STACK_STEP,
   TOAST_DISMISS_GRACE,
   TOAST_DURATION,
 } from './CardViewConfig';
 import { animationsEnabled } from '../UseAnimation';
-import { animate, clone, getExitTransform, toRem } from './CardViewHelpers';
+import { animate, clone, createCardGhost, getExitTransform } from './CardViewHelpers';
 import { translate } from '../../locale';
 
 export function useCardSkip({
@@ -41,26 +50,7 @@ export function useCardSkip({
   const getStackLayers = () => [...(contentRef.value?.querySelectorAll(':scope > .card-view__stack') ?? [])];
 
   const createGhost = (modifier) => {
-    const source = cardRef.value;
-    const ghost = source.cloneNode(true);
-    const sourceFields = source.querySelectorAll('input, textarea');
-
-    ghost.classList.add('card-view__ghost', modifier);
-    ghost.removeAttribute('id');
-    ghost.querySelectorAll('[id]').forEach((node) => node.removeAttribute('id'));
-    ghost.querySelectorAll('input, textarea').forEach((node, index) => {
-      node.value = sourceFields[index].value;
-    });
-    ghost.setAttribute('aria-hidden', 'true');
-    ghost.inert = true;
-    Object.assign(ghost.style, {
-      top: toRem(source.offsetTop),
-      left: toRem(source.offsetLeft),
-      width: toRem(source.offsetWidth),
-      height: toRem(source.offsetHeight),
-    });
-
-    contentRef.value.appendChild(ghost);
+    const ghost = createCardGhost(cardRef.value, contentRef.value, modifier);
     ghosts.add(ghost);
     return ghost;
   };
@@ -104,8 +94,16 @@ export function useCardSkip({
     }
   };
 
-  const advance = ({ undoable }) => {
-    if (isAnimating) return;
+  const discardGhost = (ghost) => {
+    ghost?.remove();
+    ghosts.delete(ghost);
+  };
+
+  const advance = ({ undoable, from = 'none', duration = SKIP_DURATION, rotation = SKIP_ROTATION, backdrop = null }) => {
+    if (isAnimating) {
+      discardGhost(backdrop);
+      return;
+    }
 
     const skippedNumber = cardNumber.value;
     const animated = canAnimate();
@@ -114,28 +112,54 @@ export function useCardSkip({
 
     if (animated) {
       ghost = createGhost('card-view__ghost--leaving');
-      leaving = animate(ghost, [{ transform: 'none' }, { transform: getExitTransform(ghost) }], {
-        easing: SKIP_EASE_IN,
+      leaving = animate(ghost, [{ transform: from }, { transform: getExitTransform(ghost, rotation) }], {
+        duration,
+        easing: SKIP_EASE,
         fill: 'forwards',
       });
+      leaving.finished
+        .then(() => showToast(undoable ? translate('card-skipped', skippedNumber) : null))
+        .catch(() => {});
     }
 
-    lastSkipped = undoable ? snapshotState() : null;
-    showToast(undoable ? translate('card-skipped', skippedNumber) : null);
+    lastSkipped = undoable ? { snapshot: snapshotState(), duration, rotation, skippedNumber } : null;
+
+    const revealAt = performance.now() + (animated ? duration : 0);
 
     cardNumber.value += 1;
     isInfoOpen.value = false;
     submission.value = null;
     resetEdit();
-    onAdvance?.(cardNumber.value);
+    onAdvance?.(cardNumber.value, revealAt);
 
-    if (!animated) return;
+    if (!animated) {
+      discardGhost(backdrop);
+      showToast(undoable ? translate('card-skipped', skippedNumber) : null);
+      return;
+    }
+
     isAnimating = true;
 
     nextTick().then(() => {
+      if (backdrop) {
+        settle(
+          [
+            leaving,
+            animate(cardRef.value, [{ opacity: 0 }, { opacity: 1 }], {
+              duration: DISSOLVE_DURATION,
+              delay: duration,
+              easing: SKIP_EASE,
+              fill: 'backwards',
+            }),
+          ],
+          [ghost, backdrop]
+        );
+        return;
+      }
+
       const [first, second] = getStackLayers();
       const forward = [{ transform: `translateY(${STACK_STEP})` }, { transform: 'none' }];
-      const options = { easing: SKIP_EASE_OUT };
+      const options = { duration, easing: SKIP_EASE };
 
       settle(
         [
@@ -159,8 +183,8 @@ export function useCardSkip({
   const skip = () => advance({ undoable: true });
 
   const undo = () => {
-    const snapshot = lastSkipped;
-    if (!snapshot || isAnimating) return;
+    const skipped = lastSkipped;
+    if (!skipped || isAnimating) return;
 
     lastSkipped = null;
     showToast(null);
@@ -169,7 +193,7 @@ export function useCardSkip({
     const animated = canAnimate();
     const under = animated ? createGhost('card-view__ghost--under') : null;
 
-    restoreState(snapshot);
+    restoreState(skipped.snapshot);
 
     if (!animated) return;
     isAnimating = true;
@@ -178,11 +202,18 @@ export function useCardSkip({
       const card = cardRef.value;
       const [first, second, hidden] = getStackLayers();
       const backward = [{ transform: `translateY(-${STACK_STEP})` }, { transform: 'none' }];
-      const options = { easing: SKIP_EASE_OUT };
+      const options = { duration: skipped.duration, easing: SKIP_EASE };
 
       settle(
         [
-          animate(card, [{ transform: getExitTransform(card) }, { transform: 'none' }], options),
+          animate(
+            card,
+            [
+              { transform: getExitTransform(card, skipped.rotation) },
+              { transform: 'none' },
+            ],
+            options
+          ),
           animate(
             under,
             [
@@ -226,7 +257,150 @@ export function useCardSkip({
     timers.push(toastTimer);
   };
 
+  let drag = null;
+
+  const blockNextClick = () => {
+    const block = (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+    };
+
+    window.addEventListener('click', block, { capture: true, once: true });
+    setTimeout(() => window.removeEventListener('click', block, { capture: true }), 0);
+  };
+
+  const stopDragListening = () => {
+    window.removeEventListener('pointermove', onPointerMove);
+    window.removeEventListener('pointerup', onPointerUp);
+    window.removeEventListener('pointercancel', onPointerCancel);
+
+    if (drag?.active && drag.target.hasPointerCapture?.(drag.id)) {
+      drag.target.releasePointerCapture(drag.id);
+    }
+  };
+
+  const createBackdrop = () => {
+    const source = cardRef.value;
+    const backdrop = createCardGhost(source, contentRef.value, 'card-view__ghost--backdrop', { shallow: true });
+
+    ghosts.add(backdrop);
+    return backdrop;
+  };
+
+  const bounceBack = (from, backdrop) => {
+    const card = cardRef.value;
+
+    card.style.transform = '';
+    isAnimating = true;
+
+    animate(card, [{ transform: from }, { transform: 'none' }], {
+      duration: SKIP_BOUNCE_DURATION,
+      easing: SKIP_EASE,
+    }).finished.then(() => {
+      discardGhost(backdrop);
+      isAnimating = false;
+    });
+  };
+
+  const getDragOffset = (delta) =>
+    delta < 0 ? delta : delta / (1 + (SKIP_DRAG_RESISTANCE * delta) / SKIP_DRAG_RESISTANCE_RANGE);
+
+  const getDragAngle = (deltaX, width) =>
+    Math.max(-SKIP_ROTATION, Math.min(SKIP_ROTATION, (deltaX / (width / 2)) * SKIP_ROTATION));
+
+  function onPointerMove(event) {
+    if (!drag || event.pointerId !== drag.id) return;
+
+    const delta = event.clientY - drag.startY;
+
+    if (!drag.active) {
+      if (Math.abs(delta) < SKIP_DRAG_THRESHOLD) return;
+      drag.active = true;
+      drag.target.setPointerCapture?.(drag.id);
+      if (canAnimate()) drag.backdrop = createBackdrop();
+    }
+
+    const elapsed = event.timeStamp - drag.lastTime;
+    if (elapsed > 0) drag.velocity = (event.clientY - drag.lastY) / elapsed;
+    drag.lastY = event.clientY;
+    drag.lastTime = event.timeStamp;
+
+    drag.offset = getDragOffset(delta);
+    drag.angle = getDragAngle(event.clientX - drag.startX, drag.width);
+
+    cardRef.value.style.transform = `translateY(${drag.offset}px) rotate(${drag.angle}deg)`;
+  }
+
+  function onPointerUp(event) {
+    if (!drag || event.pointerId !== drag.id) return;
+
+    const current = drag;
+    stopDragListening();
+    drag = null;
+
+    if (!current.active) return;
+
+    blockNextClick();
+
+    const card = cardRef.value;
+    const from = card.style.transform || 'none';
+    const committed = -current.offset >= current.height * SKIP_DRAG_DISTANCE || current.velocity <= -SKIP_DRAG_VELOCITY;
+
+    if (!committed) {
+      bounceBack(from, current.backdrop);
+      return;
+    }
+
+    card.style.transform = '';
+    advance({
+      undoable: true,
+      from,
+      duration: SKIP_DRAG_DURATION,
+      rotation: current.angle,
+      backdrop: current.backdrop,
+    });
+  }
+
+  function onPointerCancel(event) {
+    if (!drag || event.pointerId !== drag.id) return;
+
+    const current = drag;
+    const from = cardRef.value.style.transform || 'none';
+    stopDragListening();
+    drag = null;
+
+    bounceBack(from, current.backdrop);
+  }
+
+  const onHeaderPointerDown = (event) => {
+    if (drag || isAnimating || !isLoaded.value || isInfoOpen.value || !cardRef.value) return;
+    if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
+
+    drag = {
+      id: event.pointerId,
+      target: event.currentTarget,
+      startX: event.clientX,
+      startY: event.clientY,
+      lastY: event.clientY,
+      lastTime: event.timeStamp,
+      velocity: 0,
+      offset: 0,
+      angle: 0,
+      width: cardRef.value.offsetWidth,
+      height: cardRef.value.offsetHeight,
+      backdrop: null,
+      active: false,
+    };
+
+    window.addEventListener('pointermove', onPointerMove);
+    window.addEventListener('pointerup', onPointerUp);
+    window.addEventListener('pointercancel', onPointerCancel);
+  };
+
+  const isBusy = () => isAnimating || Boolean(drag?.active);
+
   onBeforeUnmount(() => {
+    stopDragListening();
     ghosts.forEach((ghost) => ghost.remove());
   });
 
@@ -236,5 +410,7 @@ export function useCardSkip({
     skip,
     undo,
     dismissToast,
+    onHeaderPointerDown,
+    isBusy,
   };
 }
