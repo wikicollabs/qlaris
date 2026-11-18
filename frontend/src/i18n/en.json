@@ -61,7 +61,7 @@
   "card-load-error-heading": "Failed to load cards",
   "card-load-error-message": "Check your internet connection, then try again in a few moments.",
   "card-load-error-action": "Reload page",
-  "card-cover-source": "Album art from Cover Art Archive",
+  "card-cover-source": "Image from $1",
   "card-form-heading": "Fill out these statements—skip the ones you don't know.",
   "card-add-title": "Add title",
   "card-add-date": "Add year or date",

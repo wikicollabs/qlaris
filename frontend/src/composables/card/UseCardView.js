@@ -75,7 +75,7 @@ export function useCardView(props, emit) {
       ? {
           ...currentItem.value,
           cover: currentCoverArt.value?.url ?? DEFAULT_CARD.cover,
-          coverSource: currentCoverArt.value?.url ? 'Cover Art Archive' : null,
+          coverSource: currentCoverArt.value?.url ? 'Wikimedia Commons' : null,
         }
       : DEFAULT_CARD
   );

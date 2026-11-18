@@ -52,7 +52,7 @@ export const DEFAULT_CARD = {
   performer: { id: 'Q23215', label: 'Adele' },
   description: '2008 debut studio album by Adele',
   cover: albumCover,
-  coverSource: 'Cover Art Archive',
+  coverSource: 'Wikimedia Commons',
 };
 
 export const CARDS = {
@@ -74,7 +74,7 @@ export const CARDS = {
     performer: { id: 'Q2811247', label: 'The 1975' },
     description: '2016 studio album by The 1975',
     cover: albumCover,
-    coverSource: 'Cover Art Archive',
+    coverSource: 'Wikimedia Commons',
   },
 };
 
