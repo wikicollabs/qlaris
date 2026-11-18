@@ -1,6 +1,6 @@
 import { fetchWikidataItem } from './wikidata.js';
 
-interface MusicBrainzStatement {
+interface WikidataStatement {
   rank: string;
   value: {
     type: string;
@@ -9,9 +9,13 @@ interface MusicBrainzStatement {
 }
 
 interface WikidataItem {
-  statements?: {
-    P436?: MusicBrainzStatement[];
-  };
+  statements?: Record<string, WikidataStatement[]>;
+}
+
+interface ItemImage {
+  url: string | null;
+  source: 'commons';
+  imageType: 'album' | 'logo' | 'performer' | null;
 }
 
 export class ItemNotFoundError extends Error {
@@ -21,56 +25,96 @@ export class ItemNotFoundError extends Error {
   }
 }
 
-export async function getMusicBrainzReleaseGroupId(
-  itemId: string,
-): Promise<string | null> {
-  const response = await fetchWikidataItem(itemId);
-
-  if (response.status === 404) {
-    throw new ItemNotFoundError();
-  }
-
-  if (!response.ok) {
-    throw new Error(`Wikidata returned HTTP ${response.status}`);
-  }
-
-  const item = (await response.json()) as WikidataItem;
-  const statements = item.statements?.P436 ?? [];
-
-  const statement = statements.find(
-    (statement) =>
-      statement.rank !== 'deprecated' &&
-      statement.value.type === 'value' &&
-      typeof statement.value.content === 'string',
-  );
-
-  return typeof statement?.value.content === 'string'
-    ? statement.value.content
-    : null;
-}
-
-export async function getCoverArtUrl(
-  releaseGroupId: string,
-): Promise<string | null> {
-  const url = `https://coverartarchive.org/release-group/${releaseGroupId}/front-500`;
-
-  const response = await fetch(url, {
-    method: 'HEAD',
-    headers: {
-      'User-Agent': 'Qlaris/0.1.0 (https://github.com/wikicollabs/qlaris)',
-    },
-    signal: AbortSignal.timeout(10000),
-  });
+async function getItem(id: string): Promise<WikidataItem | null> {
+  const response = await fetchWikidataItem(id);
 
   if (response.status === 404) {
     return null;
   }
 
   if (!response.ok) {
-    throw new Error(
-      `Cover Art Archive returned HTTP ${response.status}`,
-    );
+    throw new Error(`Wikidata returned HTTP ${response.status}`);
   }
 
-  return url;
+  return (await response.json()) as WikidataItem;
+}
+
+function getStringValues(
+  item: WikidataItem,
+  propertyId: string,
+): string[] {
+  const statements = item.statements?.[propertyId] ?? [];
+  const values: string[] = [];
+
+  for (const rank of ['preferred', 'normal']) {
+    for (const statement of statements) {
+      if (
+        statement.rank === rank &&
+        statement.value.type === 'value' &&
+        typeof statement.value.content === 'string' &&
+        statement.value.content.trim()
+      ) {
+        values.push(statement.value.content);
+      }
+    }
+  }
+
+  return [...new Set(values)];
+}
+
+function createImage(
+  filename: string,
+  imageType: NonNullable<ItemImage['imageType']>,
+): ItemImage {
+  return {
+    url: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(filename)}?width=500`,
+    source: 'commons',
+    imageType,
+  };
+}
+
+export async function getItemImage(
+  itemId: string,
+): Promise<ItemImage> {
+  const album = await getItem(itemId);
+
+  if (!album) {
+    throw new ItemNotFoundError();
+  }
+
+  const albumImage = getStringValues(album, 'P18')[0];
+
+  if (albumImage) {
+    return createImage(albumImage, 'album');
+  }
+
+  const albumLogo = getStringValues(album, 'P154')[0];
+
+  if (albumLogo) {
+    return createImage(albumLogo, 'logo');
+  }
+
+  const performerIds = getStringValues(album, 'P175').filter(
+    (id) => /^Q[1-9]\d*$/.test(id),
+  );
+
+  for (const performerId of performerIds) {
+    const performer = await getItem(performerId);
+
+    if (!performer) {
+      continue;
+    }
+
+    const performerImage = getStringValues(performer, 'P18')[0];
+
+    if (performerImage) {
+      return createImage(performerImage, 'performer');
+    }
+  }
+
+  return {
+    url: null,
+    source: 'commons',
+    imageType: null,
+  };
 }

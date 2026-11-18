@@ -1,7 +1,6 @@
 import express from 'express';
 import {
-  getMusicBrainzReleaseGroupId,
-  getCoverArtUrl,
+  getItemImage,
   ItemNotFoundError,
 } from './coverArt.js';
 import { discoverAlbums } from './discovery.js';
@@ -257,22 +256,9 @@ app.get('/api/items/:id/cover-art', async (req, res) => {
   }
 
   try {
-    const releaseGroupId = await getMusicBrainzReleaseGroupId(id);
+    const image = await getItemImage(id);
 
-    if (!releaseGroupId) {
-      res.json({
-        url: null,
-        source: 'coverartarchive',
-      });
-      return;
-    }
-
-    const url = await getCoverArtUrl(releaseGroupId);
-
-    res.json({
-      url,
-      source: 'coverartarchive',
-    });
+    res.json(image);
   } catch (error) {
     if (error instanceof ItemNotFoundError) {
       res.status(404).json({
@@ -282,11 +268,11 @@ app.get('/api/items/:id/cover-art', async (req, res) => {
       return;
     }
 
-    console.error('Cover art request failed:', error);
+    console.error('Item image request failed:', error);
 
     res.status(502).json({
-      error: 'cover_art_unavailable',
-      message: 'Unable to retrieve cover art.',
+      error: 'item_image_unavailable',
+      message: 'Unable to retrieve the Item image.',
     });
   }
 });
