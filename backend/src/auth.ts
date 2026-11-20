@@ -2,10 +2,12 @@ import { createHash, randomBytes } from 'node:crypto';
 import { Router } from 'express';
 import { getSession } from './session.js';
 import {
-  InvalidRefreshTokenError,
-  refreshAccessToken,
   type OAuthTokenResponse,
 } from './oauthTokens.js';
+import {
+  requireAuthenticatedSession,
+  SessionAuthError,
+} from './sessionAuth.js';
 
 const FRONTEND_URL = process.env.FRONTEND_URL;
 
@@ -232,76 +234,35 @@ authRouter.get('/callback', async (req, res) => {
   }
 });
 
+
 authRouter.get('/me', async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
 
-  const session = await getSession(req, res);
+  try {
+    const session = await requireAuthenticatedSession(req, res);
 
-  if (!session.user || !session.accessToken) {
-    res.status(401).json({
-      error: 'unauthenticated',
-      message: 'You are not signed in.',
+    res.json({
+      authenticated: true,
+      user: session.user,
     });
-    return;
-  }
+  } catch (error) {
+    if (error instanceof SessionAuthError) {
 
-  if (!session.tokenExpiresAt) {
-    session.destroy();
-
-    res.status(401).json({
-      error: 'session_expired',
-      message: 'Your authentication has expired. Please sign in again.',
-    });
-    return;
-  }
-
-  if (Date.now() >= session.tokenExpiresAt) {
-    if (!session.refreshToken) {
-      session.destroy();
-
-      res.status(401).json({
-        error: 'session_expired',
-        message: 'Your authentication has expired. Please sign in again.',
+      res.status(error.status).json({
+        error: error.code,
+        message: error.message,
       });
       return;
     }
 
-    try {
-      const tokens = await refreshAccessToken(session.refreshToken);
-
-      session.accessToken = tokens.access_token;
-      session.refreshToken = tokens.refresh_token ?? session.refreshToken;
-      session.tokenExpiresAt = Date.now() + tokens.expires_in * 1000;
-
-      await session.save();
-    } catch (error) {
-      if (error instanceof InvalidRefreshTokenError) {
-        session.destroy();
-
-        res.status(401).json({
-          error: 'session_expired',
-          message: 'Your authentication has expired. Please sign in again.',
-        });
-        return;
-      }
-      console.error(
-        'OAuth token refresh failed:',
-        error instanceof Error ? error.message : 'Unknown error',
-      );
-
-      res.status(503).json({
-        error: 'oauth_refresh_failed',
-        message: 'Unable to renew your Wikimedia authentication.',
-      });
-      return;
-    }
+    console.error('Session authentication failed:', error);
+    res.status(500).json({
+      error: 'authentication_failed',
+      message: 'Unable to verify your Wikimedia authentication.',
+    });
   }
-
-  res.json({
-    authenticated: true,
-    user: session.user,
-  });
 });
+
 
 authRouter.post('/logout', async (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
