@@ -25,17 +25,16 @@ import {
   fields,
   months,
   titleField,
-  titleLanguages,
 } from './CardViewConfig';
 import {
   animate,
   fieldId,
   focusById,
   formatEntity,
-  reloadPage,
   settleAfter,
   splitEntityLabel,
 } from './CardViewHelpers';
+import { titleLanguages } from '../../services/titleLanguages';
 import { useCardChanges } from './UseCardChanges';
 import { useCardDissolve } from './UseCardDissolve';
 import { useCardEditor } from './UseCardEditor';
@@ -69,6 +68,8 @@ export function useCardView(props, emit) {
   let activePrefetches = 0;
   let isUnmounted = false;
   let coverTimer = null;
+  let loadController = null;
+  let failedStep = 'load';
 
   const card = computed(() =>
     currentItem.value
@@ -131,7 +132,7 @@ export function useCardView(props, emit) {
       heading: translate('card-load-error-heading'),
       message: translate('card-load-error-message'),
       actionLabel: translate('card-load-error-action'),
-      onAction: reloadPage,
+      onAction: () => retryLoad(),
     },
     empty: {
       icon: cdxIconInfo,
@@ -363,6 +364,15 @@ export function useCardView(props, emit) {
     processPrefetchQueue();
   };
 
+  const retryLoad = () => {
+    if (failedStep === 'navigate') {
+      loadDiscoveredItem(cardNumber.value);
+      return;
+    }
+
+    loadCard();
+  };
+
   const loadDiscoveredItem = async (number, revealAt = 0) => {
     clearCover();
     navigationController?.abort();
@@ -408,6 +418,7 @@ export function useCardView(props, emit) {
       if (signal.aborted || isUnmounted) return;
 
       console.error('[Qlaris] Unable to load item:', error);
+      failedStep = 'navigate';
       phase.value = 'error';
     }
   };
@@ -485,15 +496,24 @@ export function useCardView(props, emit) {
   };
 
   const loadCard = async () => {
+    loadController = new AbortController();
+    const signal = AbortSignal.any([controller.signal, loadController.signal]);
+
     const timeout = setTimeout(
-      () => controller.abort(new Error('Request timed out')),
+      () => loadController.abort(new Error('Request timed out')),
       REQUEST_TIMEOUT
     );
 
-    try {
-      discoveredItems.value = await fetchDiscovery(controller.signal);
+    failedStep = 'load';
+    discoveredItems.value = [];
+    currentItem.value = null;
+    currentCoverArt.value = null;
+    phase.value = 'loading';
 
-      if (controller.signal.aborted || isUnmounted) return;
+    try {
+      discoveredItems.value = await fetchDiscovery(signal);
+
+      if (signal.aborted || isUnmounted) return;
 
       if (discoveredItems.value.length === 0) {
         phase.value = 'empty';
@@ -501,15 +521,15 @@ export function useCardView(props, emit) {
       }
 
       const id = discoveredItems.value[0];
-      const item = await fetchItem(id, controller.signal);
+      const item = await fetchItem(id, signal);
 
-      if (controller.signal.aborted || isUnmounted) return;
+      if (signal.aborted || isUnmounted) return;
 
       clearTimeout(timeout);
 
-      const coverArt = await prepareCoverArt(id, controller.signal);
+      const coverArt = await prepareCoverArt(id, signal);
 
-      if (controller.signal.aborted || isUnmounted) return;
+      if (signal.aborted || isUnmounted) return;
 
       currentItem.value = item;
       currentCoverArt.value = coverArt;
@@ -521,7 +541,7 @@ export function useCardView(props, emit) {
 
       clearTimeout(timeout);
     } catch (err) {
-      if (controller.signal.aborted && isUnmounted) return;
+      if (isUnmounted) return;
 
       console.error('[Qlaris] Unable to load card:', err);
       phase.value = 'error';
@@ -537,6 +557,7 @@ export function useCardView(props, emit) {
   onBeforeUnmount(() => {
     isUnmounted = true;
     controller.abort();
+    loadController?.abort();
     navigationController?.abort();
 
     prefetchControllers.forEach((prefetchController) => {

@@ -165,16 +165,34 @@ const selectedLabel = computed(() => {
     : '';
 });
 
+const normalize = (text) =>
+  text.normalize('NFD').replace(/\p{M}/gu, '').toLocaleLowerCase().trim();
+
+const searchIndex = computed(() =>
+  props.menuItems.map((item) => {
+    const label = normalize(item.label ?? String(item.value));
+    const value = normalize(String(item.value));
+
+    return { item, label, value, key: `${label} ${value}` };
+  })
+);
+
 const filteredMenuItems = computed(() => {
-  const query = searchQuery.value.trim().toLowerCase();
+  const query = normalize(searchQuery.value);
 
   if (!query) {
     return props.menuItems;
   }
 
-  return props.menuItems.filter((item) =>
-    (item.label ?? String(item.value)).toLowerCase().includes(query)
-  );
+  const rank = ({ label, value }) => {
+    if (value === query) return 0;
+    return label.startsWith(query) ? 1 : 2;
+  };
+
+  return searchIndex.value
+    .filter(({ key }) => key.includes(query))
+    .sort((a, b) => rank(a) - rank(b))
+    .map(({ item }) => item);
 });
 
 const activeDescendantId = computed(() =>

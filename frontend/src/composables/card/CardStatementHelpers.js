@@ -1,6 +1,6 @@
-
 import { dateFormatters } from './CardViewConfig';
 import { toDate, toIsoDate } from './CardViewHelpers';
+import { toTitleLanguage } from '../../services/titleLanguages';
 
 const PROPERTIES = ['P1476', 'P577', 'P264', 'P407'];
 const QID_PATTERN = /^Q[1-9]\d*$/;
@@ -31,7 +31,7 @@ const parseTitle = (statement) => {
 
   return {
     text: content.text,
-    language: { value: content.language, label: content.language },
+    language: toTitleLanguage(content.language),
   };
 };
 

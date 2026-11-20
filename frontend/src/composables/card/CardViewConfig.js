@@ -122,12 +122,6 @@ export const PREFILLED_VALUES = {
   },
 };
 
-export const titleLanguages = [
-  { value: 'en', label: 'English (en)' },
-  { value: 'th', label: 'ไทย (th)' },
-  { value: 'ru', label: 'русский (ru)' },
-];
-
 const monthFormatter = new Intl.DateTimeFormat(undefined, { month: 'long' });
 
 export const months = Array.from({ length: 12 }, (_, index) => ({

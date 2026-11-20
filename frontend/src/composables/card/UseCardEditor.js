@@ -10,7 +10,6 @@ import {
   dateFormatters,
   fields,
   titleField,
-  titleLanguages,
 } from './CardViewConfig';
 import {
   createInitialValues,
@@ -22,6 +21,7 @@ import {
 } from './CardViewHelpers';
 import { translate } from '../../locale';
 import { createStatementValues } from './CardStatementHelpers';
+import { findTitleLanguage } from '../../services/titleLanguages';
 
 export function useCardEditor({ card, cardNumber, isPreview, timers, expand, collapse }) {
   const precisionOptions = [
@@ -79,9 +79,7 @@ export function useCardEditor({ card, cardNumber, isPreview, timers, expand, col
 
   const canSubmitList = computed(() => listChips.value.length > 0);
 
-  const selectedTitleLanguage = computed(() =>
-    titleLanguages.find(({ value }) => value === titleLanguage.value) ?? null
-  );
+  const selectedTitleLanguage = computed(() => findTitleLanguage(titleLanguage.value));
 
   const canSubmit = computed(() =>
     titleInput.value.trim() !== '' && selectedTitleLanguage.value !== null
