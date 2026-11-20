@@ -11,8 +11,8 @@ import {
   dateFormatters,
   fields,
   titleField,
-  titleLanguages,
 } from './CardViewConfig';
+import { findTitleLanguage } from '../../services/titleLanguages';
 
 export const formatEntity = ({ label, id }) => `${label} (${id})`;
 
@@ -92,7 +92,7 @@ export const createInitialValues = (number) => {
     title: prefilled?.title
       ? {
           text: prefilled.title.text,
-          language: titleLanguages.find(({ value }) => value === prefilled.title.language) ?? null,
+          language: findTitleLanguage(prefilled.title.language),
         }
       : null,
     date: prefilled?.date ? createSavedDate(prefilled.date) : null,

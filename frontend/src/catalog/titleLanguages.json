@@ -1,0 +1,4508 @@
+{
+  "aa": {
+    "autonym": "Qafár af"
+  },
+  "aae": {
+    "autonym": "Arbërisht"
+  },
+  "ab": {
+    "autonym": "аԥсшәа"
+  },
+  "abe": {
+    "autonym": "abe"
+  },
+  "abq": {
+    "autonym": "abq"
+  },
+  "abq-latn": {
+    "autonym": "abq-latn"
+  },
+  "abr": {
+    "autonym": "Abron"
+  },
+  "abs": {
+    "autonym": "bahasa ambon"
+  },
+  "abu": {
+    "autonym": "abu"
+  },
+  "ace": {
+    "autonym": "Acèh"
+  },
+  "acf": {
+    "autonym": "Kwéyòl Sent Lisi"
+  },
+  "ach": {
+    "autonym": "ach"
+  },
+  "acm": {
+    "autonym": "عراقي"
+  },
+  "ada": {
+    "autonym": "ada"
+  },
+  "adg": {
+    "autonym": "adg"
+  },
+  "adj": {
+    "autonym": "adj"
+  },
+  "ady": {
+    "autonym": "адыгабзэ"
+  },
+  "ady-cyrl": {
+    "autonym": "адыгабзэ"
+  },
+  "ady-latn": {
+    "autonym": "ady-latn"
+  },
+  "ae": {
+    "autonym": "ae"
+  },
+  "aeb": {
+    "autonym": "تونسي / Tûnsî"
+  },
+  "aeb-arab": {
+    "autonym": "تونسي"
+  },
+  "aeb-latn": {
+    "autonym": "Tûnsî"
+  },
+  "aec": {
+    "autonym": "aec"
+  },
+  "aee": {
+    "autonym": "aee"
+  },
+  "aer": {
+    "autonym": "aer"
+  },
+  "af": {
+    "autonym": "Afrikaans"
+  },
+  "afa": {
+    "autonym": "afa"
+  },
+  "afh": {
+    "autonym": "afh"
+  },
+  "agq": {
+    "autonym": "Aghem"
+  },
+  "aha": {
+    "autonym": "aha"
+  },
+  "ahr": {
+    "autonym": "ahr"
+  },
+  "aig": {
+    "autonym": "Aanteegan an' Baabyuudan"
+  },
+  "aii": {
+    "autonym": "aii"
+  },
+  "ain": {
+    "autonym": "ain"
+  },
+  "ajg": {
+    "autonym": "ajg"
+  },
+  "ajp": {
+    "autonym": "ajp"
+  },
+  "ajp-arab": {
+    "autonym": "ajp-arab"
+  },
+  "ajp-latn": {
+    "autonym": "ajp-latn"
+  },
+  "ak": {
+    "autonym": "Akan"
+  },
+  "akb": {
+    "autonym": "akb"
+  },
+  "akk": {
+    "autonym": "akk"
+  },
+  "akk-latn": {
+    "autonym": "akk-latn"
+  },
+  "akk-xsux": {
+    "autonym": "akk-xsux"
+  },
+  "akz": {
+    "autonym": "akz"
+  },
+  "alc": {
+    "autonym": "alc"
+  },
+  "ale": {
+    "autonym": "ale"
+  },
+  "ale-cyrl": {
+    "autonym": "ale-cyrl"
+  },
+  "alg": {
+    "autonym": "alg"
+  },
+  "aln": {
+    "autonym": "Gegë"
+  },
+  "alq": {
+    "autonym": "alq"
+  },
+  "als": {
+    "autonym": "Alemannisch"
+  },
+  "alt": {
+    "autonym": "алтай тил"
+  },
+  "aly": {
+    "autonym": "aly"
+  },
+  "am": {
+    "autonym": "አማርኛ"
+  },
+  "ami": {
+    "autonym": "Pangcah"
+  },
+  "amx": {
+    "autonym": "amx"
+  },
+  "an": {
+    "autonym": "aragonés"
+  },
+  "ane": {
+    "autonym": "ane"
+  },
+  "ang": {
+    "autonym": "Ænglisc"
+  },
+  "ann": {
+    "autonym": "Obolo"
+  },
+  "anp": {
+    "autonym": "अंगिका"
+  },
+  "apa": {
+    "autonym": "apa"
+  },
+  "apc": {
+    "autonym": "شامي"
+  },
+  "apc-arab": {
+    "autonym": "apc-arab"
+  },
+  "apc-latn": {
+    "autonym": "apc-latn"
+  },
+  "apw": {
+    "autonym": "apw"
+  },
+  "ar": {
+    "autonym": "العربية"
+  },
+  "ar-001": {
+    "autonym": "ar-001"
+  },
+  "arc": {
+    "autonym": "ܐܪܡܝܐ"
+  },
+  "are": {
+    "autonym": "are"
+  },
+  "arn": {
+    "autonym": "mapudungun"
+  },
+  "aro": {
+    "autonym": "aro"
+  },
+  "arp": {
+    "autonym": "arp"
+  },
+  "arq": {
+    "autonym": "جازايرية"
+  },
+  "ars": {
+    "autonym": "ars"
+  },
+  "art": {
+    "autonym": "art"
+  },
+  "arw": {
+    "autonym": "arw"
+  },
+  "ary": {
+    "autonym": "الدارجة"
+  },
+  "ary-arab": {
+    "autonym": "ary-arab"
+  },
+  "ary-latn": {
+    "autonym": "ary-latn"
+  },
+  "arz": {
+    "autonym": "مصرى"
+  },
+  "as": {
+    "autonym": "অসমীয়া"
+  },
+  "asa": {
+    "autonym": "asa"
+  },
+  "ase": {
+    "autonym": "American sign language"
+  },
+  "ast": {
+    "autonym": "asturianu"
+  },
+  "ath": {
+    "autonym": "ath"
+  },
+  "ati": {
+    "autonym": "ati"
+  },
+  "atj": {
+    "autonym": "Atikamekw"
+  },
+  "atv": {
+    "autonym": "atv"
+  },
+  "aus": {
+    "autonym": "aus"
+  },
+  "av": {
+    "autonym": "авар"
+  },
+  "avi": {
+    "autonym": "avi"
+  },
+  "avk": {
+    "autonym": "Kotava"
+  },
+  "awa": {
+    "autonym": "अवधी"
+  },
+  "axe": {
+    "autonym": "axe"
+  },
+  "axl": {
+    "autonym": "axl"
+  },
+  "ay": {
+    "autonym": "Aymar aru"
+  },
+  "ayh": {
+    "autonym": "ayh"
+  },
+  "ayz": {
+    "autonym": "ayz"
+  },
+  "az": {
+    "autonym": "azərbaycanca"
+  },
+  "az-arab": {
+    "autonym": "az-arab"
+  },
+  "az-cyrl": {
+    "autonym": "az-cyrl"
+  },
+  "az-latn": {
+    "autonym": "az-latn"
+  },
+  "azb": {
+    "autonym": "تۆرکجه"
+  },
+  "azj": {
+    "autonym": "azj"
+  },
+  "ba": {
+    "autonym": "башҡортса"
+  },
+  "bad": {
+    "autonym": "bad"
+  },
+  "bag": {
+    "autonym": "Tuki"
+  },
+  "bai": {
+    "autonym": "bai"
+  },
+  "bal": {
+    "autonym": "bal"
+  },
+  "bal-latn": {
+    "autonym": "bal-latn"
+  },
+  "ban": {
+    "autonym": "Basa Bali"
+  },
+  "ban-bali": {
+    "autonym": "ᬩᬲᬩᬮᬶ"
+  },
+  "bar": {
+    "autonym": "Boarisch"
+  },
+  "bas": {
+    "autonym": "Basaa"
+  },
+  "bat": {
+    "autonym": "bat"
+  },
+  "bat-smg": {
+    "autonym": "žemaitėška"
+  },
+  "bax": {
+    "autonym": "Bamum"
+  },
+  "bbc": {
+    "autonym": "Batak Toba"
+  },
+  "bbc-batk": {
+    "autonym": "bbc-batk"
+  },
+  "bbc-latn": {
+    "autonym": "Batak Toba"
+  },
+  "bbj": {
+    "autonym": "Ghomála'"
+  },
+  "bcc": {
+    "autonym": "جهلسری بلوچی"
+  },
+  "bci": {
+    "autonym": "wawle"
+  },
+  "bcl": {
+    "autonym": "Bikol Central"
+  },
+  "bdr": {
+    "autonym": "Bajau Sama"
+  },
+  "be": {
+    "autonym": "беларуская"
+  },
+  "be-tarask": {
+    "autonym": "беларуская (тарашкевіца)"
+  },
+  "be-x-old": {
+    "autonym": "беларуская (тарашкевіца)"
+  },
+  "bej": {
+    "autonym": "bej"
+  },
+  "bem": {
+    "autonym": "bem"
+  },
+  "ber": {
+    "autonym": "ber"
+  },
+  "bew": {
+    "autonym": "Betawi"
+  },
+  "bez": {
+    "autonym": "bez"
+  },
+  "bfa": {
+    "autonym": "bfa"
+  },
+  "bfd": {
+    "autonym": "Bafut"
+  },
+  "bfi": {
+    "autonym": "bfi"
+  },
+  "bfq": {
+    "autonym": "bfq"
+  },
+  "bft": {
+    "autonym": "bft"
+  },
+  "bft-tibt": {
+    "autonym": "bft-tibt"
+  },
+  "bfw": {
+    "autonym": "ରେମସାମ୍"
+  },
+  "bfz": {
+    "autonym": "bfz"
+  },
+  "bfz-deva": {
+    "autonym": "bfz-deva"
+  },
+  "bfz-takr": {
+    "autonym": "bfz-takr"
+  },
+  "bg": {
+    "autonym": "български"
+  },
+  "bgc": {
+    "autonym": "हरियाणवी"
+  },
+  "bgc-arab": {
+    "autonym": "bgc-arab"
+  },
+  "bgc-deva": {
+    "autonym": "bgc-deva"
+  },
+  "bgn": {
+    "autonym": "روچ کپتین بلوچی"
+  },
+  "bgp": {
+    "autonym": "bgp"
+  },
+  "bgq": {
+    "autonym": "bgq"
+  },
+  "bgq-arab": {
+    "autonym": "bgq-arab"
+  },
+  "bgq-deva": {
+    "autonym": "bgq-deva"
+  },
+  "bh": {
+    "autonym": "भोजपुरी"
+  },
+  "bha": {
+    "autonym": "bha"
+  },
+  "bhd": {
+    "autonym": "bhd"
+  },
+  "bhd-deva": {
+    "autonym": "bhd-deva"
+  },
+  "bhd-takr": {
+    "autonym": "bhd-takr"
+  },
+  "bho": {
+    "autonym": "भोजपुरी"
+  },
+  "bi": {
+    "autonym": "Bislama"
+  },
+  "bik": {
+    "autonym": "bik"
+  },
+  "bin": {
+    "autonym": "bin"
+  },
+  "bjj": {
+    "autonym": "bjj"
+  },
+  "bjn": {
+    "autonym": "Banjar"
+  },
+  "bkc": {
+    "autonym": "Baka"
+  },
+  "bkh": {
+    "autonym": "Bakoko"
+  },
+  "bkm": {
+    "autonym": "Kom"
+  },
+  "bkn": {
+    "autonym": "bkn"
+  },
+  "bla": {
+    "autonym": "bla"
+  },
+  "blc": {
+    "autonym": "blc"
+  },
+  "blk": {
+    "autonym": "ပအိုဝ်ႏဘာႏသာႏ"
+  },
+  "blo": {
+    "autonym": "blo"
+  },
+  "blt": {
+    "autonym": "blt"
+  },
+  "bm": {
+    "autonym": "bamanankan"
+  },
+  "bn": {
+    "autonym": "বাংলা"
+  },
+  "bn-sylo": {
+    "autonym": "bn-sylo"
+  },
+  "bnb": {
+    "autonym": "bnb"
+  },
+  "bnn": {
+    "autonym": "bnn"
+  },
+  "bnt": {
+    "autonym": "bnt"
+  },
+  "bny": {
+    "autonym": "bny"
+  },
+  "bo": {
+    "autonym": "བོད་ཡིག"
+  },
+  "bol": {
+    "autonym": "bòo pìkkà"
+  },
+  "bom": {
+    "autonym": "bom"
+  },
+  "bpy": {
+    "autonym": "বিষ্ণুপ্রিয়া মণিপুরী"
+  },
+  "bqi": {
+    "autonym": "بختیاری"
+  },
+  "bqz": {
+    "autonym": "Mka'a"
+  },
+  "br": {
+    "autonym": "brezhoneg"
+  },
+  "bra": {
+    "autonym": "bra"
+  },
+  "brh": {
+    "autonym": "Bráhuí"
+  },
+  "brh-arab": {
+    "autonym": "brh-arab"
+  },
+  "brh-latn": {
+    "autonym": "brh-latn"
+  },
+  "brx": {
+    "autonym": "brx"
+  },
+  "bs": {
+    "autonym": "bosanski"
+  },
+  "bse": {
+    "autonym": "bse"
+  },
+  "bsk": {
+    "autonym": "bsk"
+  },
+  "bss": {
+    "autonym": "bss"
+  },
+  "btd": {
+    "autonym": "btd"
+  },
+  "bth": {
+    "autonym": "bth"
+  },
+  "btk": {
+    "autonym": "btk"
+  },
+  "btm": {
+    "autonym": "Batak Mandailing"
+  },
+  "bto": {
+    "autonym": "Iriga Bicolano"
+  },
+  "bts": {
+    "autonym": "bts"
+  },
+  "btx": {
+    "autonym": "btx"
+  },
+  "btz": {
+    "autonym": "btz"
+  },
+  "bua": {
+    "autonym": "bua"
+  },
+  "bug": {
+    "autonym": "Basa Ugi"
+  },
+  "bug-bugi": {
+    "autonym": "ᨅᨔ ᨕᨘᨁᨗ"
+  },
+  "bum": {
+    "autonym": "bum"
+  },
+  "bvb": {
+    "autonym": "bvb"
+  },
+  "bwr": {
+    "autonym": "bwr"
+  },
+  "bxr": {
+    "autonym": "буряад"
+  },
+  "byn": {
+    "autonym": "byn"
+  },
+  "byv": {
+    "autonym": "Medumba"
+  },
+  "bzj": {
+    "autonym": "bzj"
+  },
+  "bzs": {
+    "autonym": "bzs"
+  },
+  "ca": {
+    "autonym": "català"
+  },
+  "cad": {
+    "autonym": "cad"
+  },
+  "cai": {
+    "autonym": "cai"
+  },
+  "cak": {
+    "autonym": "Kaqchikel"
+  },
+  "cal": {
+    "autonym": "Carolinian"
+  },
+  "car": {
+    "autonym": "car"
+  },
+  "cau": {
+    "autonym": "cau"
+  },
+  "cay": {
+    "autonym": "cay"
+  },
+  "cbk": {
+    "autonym": "Chavacano de Zamboanga"
+  },
+  "cbk-zam": {
+    "autonym": "Chavacano de Zamboanga"
+  },
+  "cch": {
+    "autonym": "cch"
+  },
+  "ccp": {
+    "autonym": "𑄌𑄋𑄴𑄟𑄳𑄦"
+  },
+  "ccp-beng": {
+    "autonym": "ccp-beng"
+  },
+  "cdo": {
+    "autonym": "閩東語 / Mìng-dĕ̤ng-ngṳ̄"
+  },
+  "cdo-hani": {
+    "autonym": "cdo-hani"
+  },
+  "cdo-hant": {
+    "autonym": "閩東語（傳統漢字）"
+  },
+  "cdo-latn": {
+    "autonym": "Mìng-dĕ̤ng-ngṳ̄ (Bàng-uâ-cê)"
+  },
+  "cdz-beng": {
+    "autonym": "cdz-beng"
+  },
+  "ce": {
+    "autonym": "нохчийн"
+  },
+  "ceb": {
+    "autonym": "Cebuano"
+  },
+  "cel": {
+    "autonym": "cel"
+  },
+  "cgg": {
+    "autonym": "cgg"
+  },
+  "ch": {
+    "autonym": "Chamoru"
+  },
+  "chb": {
+    "autonym": "chb"
+  },
+  "chg": {
+    "autonym": "chg"
+  },
+  "chk": {
+    "autonym": "chk"
+  },
+  "chm": {
+    "autonym": "chm"
+  },
+  "chn": {
+    "autonym": "chinuk wawa"
+  },
+  "cho": {
+    "autonym": "Chahta anumpa"
+  },
+  "chp": {
+    "autonym": "chp"
+  },
+  "chr": {
+    "autonym": "ᏣᎳᎩ"
+  },
+  "chy": {
+    "autonym": "Tsetsêhestâhese"
+  },
+  "cic": {
+    "autonym": "cic"
+  },
+  "ciw": {
+    "autonym": "ciw"
+  },
+  "cja": {
+    "autonym": "cja"
+  },
+  "cja-arab": {
+    "autonym": "cja-arab"
+  },
+  "cja-cham": {
+    "autonym": "cja-cham"
+  },
+  "cja-latn": {
+    "autonym": "cja-latn"
+  },
+  "cjm": {
+    "autonym": "cjm"
+  },
+  "cjm-arab": {
+    "autonym": "cjm-arab"
+  },
+  "cjm-cham": {
+    "autonym": "cjm-cham"
+  },
+  "cjm-latn": {
+    "autonym": "cjm-latn"
+  },
+  "cjy": {
+    "autonym": "cjy"
+  },
+  "cjy-hans": {
+    "autonym": "cjy-hans"
+  },
+  "cjy-hant": {
+    "autonym": "cjy-hant"
+  },
+  "ckb": {
+    "autonym": "کوردی"
+  },
+  "ckb-arab": {
+    "autonym": "ckb-arab"
+  },
+  "ckb-latn": {
+    "autonym": "ckb-latn"
+  },
+  "cko": {
+    "autonym": "cko"
+  },
+  "ckt": {
+    "autonym": "ckt"
+  },
+  "ckv": {
+    "autonym": "ckv"
+  },
+  "clc": {
+    "autonym": "clc"
+  },
+  "cmc": {
+    "autonym": "cmc"
+  },
+  "cmg": {
+    "autonym": "cmg"
+  },
+  "cmn-latn-cn-pinyin": {
+    "autonym": "cmn-latn-cn-pinyin"
+  },
+  "cmn-latn-tw-pinyin": {
+    "autonym": "cmn-latn-tw-pinyin"
+  },
+  "cmn-latn-tw-tongyong": {
+    "autonym": "cmn-latn-tw-tongyong"
+  },
+  "cmn-latn-tw-wadegile": {
+    "autonym": "cmn-latn-tw-wadegile"
+  },
+  "cnh": {
+    "autonym": "Hakha Chin"
+  },
+  "cnr": {
+    "autonym": "cnr"
+  },
+  "cnr-cyrl": {
+    "autonym": "cnr-cyrl"
+  },
+  "cnr-latn": {
+    "autonym": "cnr-latn"
+  },
+  "cnx": {
+    "autonym": "cnx"
+  },
+  "co": {
+    "autonym": "corsu"
+  },
+  "coa": {
+    "autonym": "coa"
+  },
+  "cop": {
+    "autonym": "ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ"
+  },
+  "cpe": {
+    "autonym": "cpe"
+  },
+  "cpf": {
+    "autonym": "cpf"
+  },
+  "cpp": {
+    "autonym": "cpp"
+  },
+  "cps": {
+    "autonym": "Capiceño"
+  },
+  "cpx": {
+    "autonym": "莆仙語 / Pó-sing-gṳ̂"
+  },
+  "cpx-hans": {
+    "autonym": "莆仙语（简体）"
+  },
+  "cpx-hant": {
+    "autonym": "莆仙語（繁體）"
+  },
+  "cpx-latn": {
+    "autonym": "Pó-sing-gṳ̂ (Báⁿ-uā-ci̍)"
+  },
+  "cr": {
+    "autonym": "Nēhiyawēwin / ᓀᐦᐃᔭᐍᐏᐣ"
+  },
+  "cr-cans": {
+    "autonym": "cr-cans"
+  },
+  "cr-latn": {
+    "autonym": "cr-latn"
+  },
+  "crb": {
+    "autonym": "crb"
+  },
+  "crg": {
+    "autonym": "crg"
+  },
+  "crh": {
+    "autonym": "qırımtatarca"
+  },
+  "crh-cyrl": {
+    "autonym": "къырымтатарджа (Кирилл)"
+  },
+  "crh-latn": {
+    "autonym": "qırımtatarca (Latin)"
+  },
+  "crh-ro": {
+    "autonym": "tatarşa"
+  },
+  "crj": {
+    "autonym": "crj"
+  },
+  "crk": {
+    "autonym": "crk"
+  },
+  "crl": {
+    "autonym": "crl"
+  },
+  "crm": {
+    "autonym": "crm"
+  },
+  "crp": {
+    "autonym": "crp"
+  },
+  "crr": {
+    "autonym": "crr"
+  },
+  "crs": {
+    "autonym": "crs"
+  },
+  "cs": {
+    "autonym": "čeština"
+  },
+  "csb": {
+    "autonym": "kaszëbsczi"
+  },
+  "csw": {
+    "autonym": "csw"
+  },
+  "ctg": {
+    "autonym": "ctg"
+  },
+  "cu": {
+    "autonym": "словѣньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ"
+  },
+  "cus": {
+    "autonym": "cus"
+  },
+  "cv": {
+    "autonym": "чӑвашла"
+  },
+  "cy": {
+    "autonym": "Cymraeg"
+  },
+  "da": {
+    "autonym": "dansk"
+  },
+  "dag": {
+    "autonym": "dagbanli"
+  },
+  "dak": {
+    "autonym": "dak"
+  },
+  "dar": {
+    "autonym": "dar"
+  },
+  "dav": {
+    "autonym": "dav"
+  },
+  "day": {
+    "autonym": "day"
+  },
+  "dbj": {
+    "autonym": "dbj"
+  },
+  "ddn": {
+    "autonym": "ddn"
+  },
+  "de": {
+    "autonym": "Deutsch"
+  },
+  "de-1901": {
+    "autonym": "de-1901"
+  },
+  "de-at": {
+    "autonym": "Österreichisches Deutsch"
+  },
+  "de-ch": {
+    "autonym": "Schweizer Hochdeutsch"
+  },
+  "de-formal": {
+    "autonym": "Deutsch (Sie-Form)"
+  },
+  "del": {
+    "autonym": "del"
+  },
+  "den": {
+    "autonym": "den"
+  },
+  "dga": {
+    "autonym": "Dagaare"
+  },
+  "dgr": {
+    "autonym": "dgr"
+  },
+  "din": {
+    "autonym": "Thuɔŋjäŋ"
+  },
+  "diq": {
+    "autonym": "Zazaki"
+  },
+  "dje": {
+    "autonym": "dje"
+  },
+  "djk": {
+    "autonym": "djk"
+  },
+  "dkr": {
+    "autonym": "dkr"
+  },
+  "dlg": {
+    "autonym": "долган тыла"
+  },
+  "dmg": {
+    "autonym": "dmg"
+  },
+  "dmv": {
+    "autonym": "dmv"
+  },
+  "doi": {
+    "autonym": "doi"
+  },
+  "doi-arab": {
+    "autonym": "doi-arab"
+  },
+  "doi-deva": {
+    "autonym": "doi-deva"
+  },
+  "doi-dogr": {
+    "autonym": "doi-dogr"
+  },
+  "dpp": {
+    "autonym": "dpp"
+  },
+  "dra": {
+    "autonym": "dra"
+  },
+  "drg": {
+    "autonym": "drg"
+  },
+  "dro": {
+    "autonym": "dro"
+  },
+  "dru": {
+    "autonym": "dru"
+  },
+  "dsb": {
+    "autonym": "dolnoserbski"
+  },
+  "dso": {
+    "autonym": "ଦେଶିଆ"
+  },
+  "dtb": {
+    "autonym": "dtb"
+  },
+  "dtp": {
+    "autonym": "Kadazandusun"
+  },
+  "dtr": {
+    "autonym": "dtr"
+  },
+  "dty": {
+    "autonym": "डोटेली"
+  },
+  "dua": {
+    "autonym": "Duala"
+  },
+  "duf": {
+    "autonym": "duf"
+  },
+  "dum": {
+    "autonym": "dum"
+  },
+  "dv": {
+    "autonym": "ދިވެހިބަސް"
+  },
+  "dyo": {
+    "autonym": "dyo"
+  },
+  "dyu": {
+    "autonym": "dyu"
+  },
+  "dz": {
+    "autonym": "ཇོང་ཁ"
+  },
+  "dzg": {
+    "autonym": "dzg"
+  },
+  "ebu": {
+    "autonym": "ebu"
+  },
+  "ee": {
+    "autonym": "eʋegbe"
+  },
+  "efi": {
+    "autonym": "Efịk"
+  },
+  "egl": {
+    "autonym": "emiliàn e rumagnòl"
+  },
+  "egy": {
+    "autonym": "egy"
+  },
+  "eka": {
+    "autonym": "eka"
+  },
+  "ekp": {
+    "autonym": "ekp"
+  },
+  "el": {
+    "autonym": "Ελληνικά"
+  },
+  "el-cy": {
+    "autonym": "el-cy"
+  },
+  "elm": {
+    "autonym": "elm"
+  },
+  "elx": {
+    "autonym": "elx"
+  },
+  "eme": {
+    "autonym": "eme"
+  },
+  "eml": {
+    "autonym": "emiliàn e rumagnòl"
+  },
+  "en": {
+    "autonym": "English"
+  },
+  "en-au": {
+    "autonym": "en-au"
+  },
+  "en-ca": {
+    "autonym": "Canadian English"
+  },
+  "en-dsrt": {
+    "autonym": "en-dsrt"
+  },
+  "en-emodeng": {
+    "autonym": "en-emodeng"
+  },
+  "en-gb": {
+    "autonym": "British English"
+  },
+  "en-in": {
+    "autonym": "en-in"
+  },
+  "en-jm": {
+    "autonym": "en-jm"
+  },
+  "en-nz": {
+    "autonym": "en-nz"
+  },
+  "en-shaw": {
+    "autonym": "en-shaw"
+  },
+  "en-uk": {
+    "autonym": "en-uk"
+  },
+  "en-us": {
+    "autonym": "American English"
+  },
+  "enm": {
+    "autonym": "enm"
+  },
+  "eo": {
+    "autonym": "Esperanto"
+  },
+  "eo-hsistemo": {
+    "autonym": "eo-hsistemo"
+  },
+  "eo-shaw": {
+    "autonym": "eo-shaw"
+  },
+  "eo-xsistemo": {
+    "autonym": "eo-xsistemo"
+  },
+  "es": {
+    "autonym": "español"
+  },
+  "es-419": {
+    "autonym": "español de América Latina"
+  },
+  "es-es": {
+    "autonym": "es-es"
+  },
+  "es-formal": {
+    "autonym": "español (formal)"
+  },
+  "es-mx": {
+    "autonym": "es-mx"
+  },
+  "es-ni": {
+    "autonym": "es-ni"
+  },
+  "ess": {
+    "autonym": "ess"
+  },
+  "esu": {
+    "autonym": "esu"
+  },
+  "et": {
+    "autonym": "eesti"
+  },
+  "eto": {
+    "autonym": "Eton"
+  },
+  "ett": {
+    "autonym": "ett"
+  },
+  "etu": {
+    "autonym": "Ejagham"
+  },
+  "eu": {
+    "autonym": "euskara"
+  },
+  "evn": {
+    "autonym": "evn"
+  },
+  "evn-cyrl": {
+    "autonym": "evn-cyrl"
+  },
+  "evn-latn": {
+    "autonym": "evn-latn"
+  },
+  "evn-mong": {
+    "autonym": "evn-mong"
+  },
+  "ewo": {
+    "autonym": "Ewondo"
+  },
+  "ext": {
+    "autonym": "estremeñu"
+  },
+  "eya": {
+    "autonym": "eya"
+  },
+  "fa": {
+    "autonym": "فارسی"
+  },
+  "fa-034": {
+    "autonym": "fa-034"
+  },
+  "fa-af": {
+    "autonym": "fa-af"
+  },
+  "fab": {
+    "autonym": "fab"
+  },
+  "fan": {
+    "autonym": "fan"
+  },
+  "fat": {
+    "autonym": "mfantse"
+  },
+  "fax": {
+    "autonym": "fax"
+  },
+  "fay": {
+    "autonym": "fay"
+  },
+  "ff": {
+    "autonym": "Fulfulde"
+  },
+  "fi": {
+    "autonym": "suomi"
+  },
+  "fil": {
+    "autonym": "fil"
+  },
+  "fit": {
+    "autonym": "meänkieli"
+  },
+  "fiu": {
+    "autonym": "fiu"
+  },
+  "fiu-vro": {
+    "autonym": "võro"
+  },
+  "fj": {
+    "autonym": "Na Vosa Vakaviti"
+  },
+  "fkv": {
+    "autonym": "kvääni"
+  },
+  "fmp": {
+    "autonym": "Fe'fe'"
+  },
+  "fo": {
+    "autonym": "føroyskt"
+  },
+  "fon": {
+    "autonym": "fɔ̀ngbè"
+  },
+  "fos": {
+    "autonym": "fos"
+  },
+  "fr": {
+    "autonym": "français"
+  },
+  "fr-be": {
+    "autonym": "fr-be"
+  },
+  "fr-ca": {
+    "autonym": "fr-ca"
+  },
+  "fr-ch": {
+    "autonym": "fr-ch"
+  },
+  "frc": {
+    "autonym": "français cadien"
+  },
+  "frk": {
+    "autonym": "frk"
+  },
+  "frm": {
+    "autonym": "frm"
+  },
+  "fro": {
+    "autonym": "fro"
+  },
+  "frp": {
+    "autonym": "arpetan"
+  },
+  "frr": {
+    "autonym": "Nordfriisk"
+  },
+  "frs": {
+    "autonym": "Oostfräisk"
+  },
+  "fsl": {
+    "autonym": "fsl"
+  },
+  "fud": {
+    "autonym": "fud"
+  },
+  "fuf": {
+    "autonym": "fuf"
+  },
+  "fur": {
+    "autonym": "furlan"
+  },
+  "fvr": {
+    "autonym": "poor’íŋ belé’ŋ"
+  },
+  "fy": {
+    "autonym": "Frysk"
+  },
+  "ga": {
+    "autonym": "Gaeilge"
+  },
+  "gaa": {
+    "autonym": "Ga"
+  },
+  "gag": {
+    "autonym": "Gagauz"
+  },
+  "gah": {
+    "autonym": "gah"
+  },
+  "gan": {
+    "autonym": "贛語"
+  },
+  "gan-hans": {
+    "autonym": "赣语（简体）"
+  },
+  "gan-hant": {
+    "autonym": "贛語（繁體）"
+  },
+  "gay": {
+    "autonym": "gay"
+  },
+  "gba": {
+    "autonym": "gba"
+  },
+  "gbb": {
+    "autonym": "gbb"
+  },
+  "gbk": {
+    "autonym": "gbk"
+  },
+  "gbk-deva": {
+    "autonym": "gbk-deva"
+  },
+  "gbk-takr": {
+    "autonym": "gbk-takr"
+  },
+  "gbm": {
+    "autonym": "gbm"
+  },
+  "gbz": {
+    "autonym": "gbz"
+  },
+  "gcf": {
+    "autonym": "kréyòl Gwadloup"
+  },
+  "gcr": {
+    "autonym": "kriyòl gwiyannen"
+  },
+  "gd": {
+    "autonym": "Gàidhlig"
+  },
+  "gdo": {
+    "autonym": "gdo"
+  },
+  "gem": {
+    "autonym": "gem"
+  },
+  "gez": {
+    "autonym": "gez"
+  },
+  "gil": {
+    "autonym": "gil"
+  },
+  "gju": {
+    "autonym": "gju"
+  },
+  "gju-arab": {
+    "autonym": "گوجری"
+  },
+  "gju-deva": {
+    "autonym": "गुज्जरी"
+  },
+  "gl": {
+    "autonym": "galego"
+  },
+  "gld": {
+    "autonym": "на̄ни"
+  },
+  "glh": {
+    "autonym": "glh"
+  },
+  "glk": {
+    "autonym": "گیلکی"
+  },
+  "gmh": {
+    "autonym": "gmh"
+  },
+  "gml": {
+    "autonym": "gml"
+  },
+  "gmy": {
+    "autonym": "gmy"
+  },
+  "gn": {
+    "autonym": "Avañe'ẽ"
+  },
+  "gnq": {
+    "autonym": "gnq"
+  },
+  "goh": {
+    "autonym": "goh"
+  },
+  "gom": {
+    "autonym": "गोंयची कोंकणी / Gõychi Konknni"
+  },
+  "gom-deva": {
+    "autonym": "गोंयची कोंकणी"
+  },
+  "gom-latn": {
+    "autonym": "Gõychi Konknni"
+  },
+  "gon": {
+    "autonym": "gon"
+  },
+  "gor": {
+    "autonym": "Bahasa Hulontalo"
+  },
+  "got": {
+    "autonym": "𐌲𐌿𐍄𐌹𐍃𐌺"
+  },
+  "gpe": {
+    "autonym": "Ghanaian Pidgin"
+  },
+  "grb": {
+    "autonym": "grb"
+  },
+  "grc": {
+    "autonym": "Ἀρχαία ἑλληνικὴ"
+  },
+  "gsg": {
+    "autonym": "gsg"
+  },
+  "gsw": {
+    "autonym": "Alemannisch"
+  },
+  "gsw-fr": {
+    "autonym": "gsw-fr"
+  },
+  "gu": {
+    "autonym": "ગુજરાતી"
+  },
+  "guc": {
+    "autonym": "wayuunaiki"
+  },
+  "gum": {
+    "autonym": "gum"
+  },
+  "gur": {
+    "autonym": "farefare"
+  },
+  "guw": {
+    "autonym": "gungbe"
+  },
+  "guz": {
+    "autonym": "guz"
+  },
+  "gv": {
+    "autonym": "Gaelg"
+  },
+  "gwi": {
+    "autonym": "gwi"
+  },
+  "gya": {
+    "autonym": "Gbaya"
+  },
+  "ha": {
+    "autonym": "Hausa"
+  },
+  "ha-arab": {
+    "autonym": "ha-arab"
+  },
+  "ha-latn": {
+    "autonym": "ha-latn"
+  },
+  "ha-ne": {
+    "autonym": "ha-ne"
+  },
+  "hac": {
+    "autonym": "hac"
+  },
+  "hai": {
+    "autonym": "hai"
+  },
+  "hak": {
+    "autonym": "客家語 / Hak-kâ-ngî"
+  },
+  "hak-hans": {
+    "autonym": "客家语（简体）"
+  },
+  "hak-hant": {
+    "autonym": "客家語（繁體）"
+  },
+  "hak-latn": {
+    "autonym": "Hak-kâ-ngî (Pha̍k-fa-sṳ)"
+  },
+  "hav": {
+    "autonym": "hav"
+  },
+  "haw": {
+    "autonym": "Hawaiʻi"
+  },
+  "hax": {
+    "autonym": "hax"
+  },
+  "haz": {
+    "autonym": "haz"
+  },
+  "hbo": {
+    "autonym": "hbo"
+  },
+  "he": {
+    "autonym": "עברית"
+  },
+  "hea": {
+    "autonym": "hea"
+  },
+  "hi": {
+    "autonym": "हिन्दी"
+  },
+  "hi-kthi": {
+    "autonym": "hi-kthi"
+  },
+  "hi-latn": {
+    "autonym": "hi-latn"
+  },
+  "hif": {
+    "autonym": "Fiji Hindi"
+  },
+  "hif-deva": {
+    "autonym": "hif-deva"
+  },
+  "hif-latn": {
+    "autonym": "Fiji Hindi"
+  },
+  "hil": {
+    "autonym": "Ilonggo"
+  },
+  "him": {
+    "autonym": "him"
+  },
+  "hit": {
+    "autonym": "hit"
+  },
+  "hit-latn": {
+    "autonym": "hit-latn"
+  },
+  "hit-xsux": {
+    "autonym": "hit-xsux"
+  },
+  "hke": {
+    "autonym": "kihunde"
+  },
+  "hmn": {
+    "autonym": "hmn"
+  },
+  "hne": {
+    "autonym": "hne"
+  },
+  "hnj": {
+    "autonym": "hnj"
+  },
+  "hno": {
+    "autonym": "ہندکو"
+  },
+  "ho": {
+    "autonym": "Hiri Motu"
+  },
+  "hoc": {
+    "autonym": "𑢹𑣉𑣉 𑣎𑣋𑣜"
+  },
+  "hoc-latn": {
+    "autonym": "Ho"
+  },
+  "hr": {
+    "autonym": "hrvatski"
+  },
+  "hr-glag": {
+    "autonym": "hr-glag"
+  },
+  "hrx": {
+    "autonym": "Hunsrik"
+  },
+  "hsb": {
+    "autonym": "hornjoserbsce"
+  },
+  "hsn": {
+    "autonym": "湘語"
+  },
+  "hsn-hans": {
+    "autonym": "hsn-hans"
+  },
+  "hsn-hant": {
+    "autonym": "hsn-hant"
+  },
+  "ht": {
+    "autonym": "Kreyòl ayisyen"
+  },
+  "hts": {
+    "autonym": "hts"
+  },
+  "hu": {
+    "autonym": "magyar"
+  },
+  "hu-formal": {
+    "autonym": "magyar (formal)"
+  },
+  "hup": {
+    "autonym": "hup"
+  },
+  "hur": {
+    "autonym": "hur"
+  },
+  "hy": {
+    "autonym": "հայերեն"
+  },
+  "hyw": {
+    "autonym": "Արեւմտահայերէն"
+  },
+  "hz": {
+    "autonym": "Otsiherero"
+  },
+  "ia": {
+    "autonym": "interlingua"
+  },
+  "iba": {
+    "autonym": "Jaku Iban"
+  },
+  "ibb": {
+    "autonym": "ibibio"
+  },
+  "id": {
+    "autonym": "Bahasa Indonesia"
+  },
+  "ie": {
+    "autonym": "Interlingue"
+  },
+  "ifu": {
+    "autonym": "ifu"
+  },
+  "ig": {
+    "autonym": "Igbo"
+  },
+  "igb": {
+    "autonym": "igb"
+  },
+  "igl": {
+    "autonym": "Igala"
+  },
+  "ii": {
+    "autonym": "ꆇꉙ"
+  },
+  "ijo": {
+    "autonym": "ijo"
+  },
+  "ik": {
+    "autonym": "Iñupiatun"
+  },
+  "ike-cans": {
+    "autonym": "ᐃᓄᒃᑎᑐᑦ"
+  },
+  "ike-latn": {
+    "autonym": "inuktitut"
+  },
+  "ikt": {
+    "autonym": "ikt"
+  },
+  "ilo": {
+    "autonym": "Ilokano"
+  },
+  "inc": {
+    "autonym": "inc"
+  },
+  "ine": {
+    "autonym": "ine"
+  },
+  "inh": {
+    "autonym": "гӀалгӀай"
+  },
+  "io": {
+    "autonym": "Ido"
+  },
+  "ira": {
+    "autonym": "ira"
+  },
+  "iro": {
+    "autonym": "iro"
+  },
+  "is": {
+    "autonym": "íslenska"
+  },
+  "ish": {
+    "autonym": "ish"
+  },
+  "isk-arab": {
+    "autonym": "isk-arab"
+  },
+  "isk-cyrl": {
+    "autonym": "isk-cyrl"
+  },
+  "isk-latn": {
+    "autonym": "isk-latn"
+  },
+  "ist": {
+    "autonym": "ist"
+  },
+  "isu": {
+    "autonym": "Isu"
+  },
+  "isv": {
+    "autonym": "medžuslovjansky"
+  },
+  "isv-cyrl": {
+    "autonym": "меджусловјанскы"
+  },
+  "isv-latn": {
+    "autonym": "medžuslovjansky"
+  },
+  "it": {
+    "autonym": "italiano"
+  },
+  "iu": {
+    "autonym": "ᐃᓄᒃᑎᑐᑦ / inuktitut"
+  },
+  "ivb": {
+    "autonym": "ivb"
+  },
+  "izh": {
+    "autonym": "izh"
+  },
+  "izr": {
+    "autonym": "izr"
+  },
+  "ja": {
+    "autonym": "日本語"
+  },
+  "ja-hani": {
+    "autonym": "ja-hani"
+  },
+  "ja-hira": {
+    "autonym": "ja-hira"
+  },
+  "ja-hrkt": {
+    "autonym": "ja-hrkt"
+  },
+  "ja-kana": {
+    "autonym": "ja-kana"
+  },
+  "jac": {
+    "autonym": "jac"
+  },
+  "jak": {
+    "autonym": "jak"
+  },
+  "jam": {
+    "autonym": "Patois"
+  },
+  "jax": {
+    "autonym": "jax"
+  },
+  "jbo": {
+    "autonym": "la .lojban."
+  },
+  "jdt": {
+    "autonym": "jdt"
+  },
+  "jdt-cyrl": {
+    "autonym": "jdt-cyrl"
+  },
+  "jgo": {
+    "autonym": "jgo"
+  },
+  "jje": {
+    "autonym": "jje"
+  },
+  "jmc": {
+    "autonym": "jmc"
+  },
+  "jpr": {
+    "autonym": "jpr"
+  },
+  "jrb": {
+    "autonym": "jrb"
+  },
+  "juk": {
+    "autonym": "juk"
+  },
+  "jut": {
+    "autonym": "jysk"
+  },
+  "jv": {
+    "autonym": "Jawa"
+  },
+  "jv-java": {
+    "autonym": "ꦗꦮ"
+  },
+  "ka": {
+    "autonym": "ქართული"
+  },
+  "kaa": {
+    "autonym": "Qaraqalpaqsha"
+  },
+  "kab": {
+    "autonym": "Taqbaylit"
+  },
+  "kac": {
+    "autonym": "kac"
+  },
+  "kag": {
+    "autonym": "kag"
+  },
+  "kai": {
+    "autonym": "Karai-karai"
+  },
+  "kaj": {
+    "autonym": "Jju"
+  },
+  "kam": {
+    "autonym": "kam"
+  },
+  "kar": {
+    "autonym": "kar"
+  },
+  "kaw": {
+    "autonym": "kaw"
+  },
+  "kbd": {
+    "autonym": "адыгэбзэ"
+  },
+  "kbd-cyrl": {
+    "autonym": "адыгэбзэ"
+  },
+  "kbd-latn": {
+    "autonym": "kbd-latn"
+  },
+  "kbl": {
+    "autonym": "kbl"
+  },
+  "kbo": {
+    "autonym": "kbo"
+  },
+  "kbp": {
+    "autonym": "Kabɩyɛ"
+  },
+  "kcg": {
+    "autonym": "Tyap"
+  },
+  "kck": {
+    "autonym": "kck"
+  },
+  "kde": {
+    "autonym": "kde"
+  },
+  "kea": {
+    "autonym": "kabuverdianu"
+  },
+  "kek": {
+    "autonym": "kek"
+  },
+  "ken": {
+    "autonym": "ken"
+  },
+  "ker": {
+    "autonym": "Kera"
+  },
+  "kfo": {
+    "autonym": "kfo"
+  },
+  "kfr": {
+    "autonym": "kfr"
+  },
+  "kg": {
+    "autonym": "Kongo"
+  },
+  "kge": {
+    "autonym": "Kumoring"
+  },
+  "kge-arab": {
+    "autonym": "kge-arab"
+  },
+  "kgg": {
+    "autonym": "गेम्येहाक़ गिपन"
+  },
+  "kgp": {
+    "autonym": "kgp"
+  },
+  "kha": {
+    "autonym": "Khasi"
+  },
+  "khi": {
+    "autonym": "khi"
+  },
+  "kho": {
+    "autonym": "kho"
+  },
+  "khq": {
+    "autonym": "khq"
+  },
+  "khw": {
+    "autonym": "کھوار"
+  },
+  "ki": {
+    "autonym": "Gĩkũyũ"
+  },
+  "kip": {
+    "autonym": "kip"
+  },
+  "kiu": {
+    "autonym": "Kırmancki"
+  },
+  "kix": {
+    "autonym": "kix"
+  },
+  "kj": {
+    "autonym": "Kwanyama"
+  },
+  "kjh": {
+    "autonym": "хакас"
+  },
+  "kjp": {
+    "autonym": "ဖၠုံလိက်"
+  },
+  "kk": {
+    "autonym": "қазақша"
+  },
+  "kk-arab": {
+    "autonym": "قازاقشا (تٴوتە)"
+  },
+  "kk-cn": {
+    "autonym": "قازاقشا (جۇنگو)"
+  },
+  "kk-cyrl": {
+    "autonym": "қазақша (кирил)"
+  },
+  "kk-kz": {
+    "autonym": "қазақша (Қазақстан)"
+  },
+  "kk-latn": {
+    "autonym": "qazaqşa (latın)"
+  },
+  "kk-tr": {
+    "autonym": "qazaqşa (Türkïya)"
+  },
+  "kkj": {
+    "autonym": "kkj"
+  },
+  "kl": {
+    "autonym": "kalaallisut"
+  },
+  "kld": {
+    "autonym": "kld"
+  },
+  "kln": {
+    "autonym": "kln"
+  },
+  "kls": {
+    "autonym": "kls"
+  },
+  "kls-arab": {
+    "autonym": "kls-arab"
+  },
+  "kls-latn": {
+    "autonym": "kls-latn"
+  },
+  "km": {
+    "autonym": "ភាសាខ្មែរ"
+  },
+  "kmb": {
+    "autonym": "kmb"
+  },
+  "kmr": {
+    "autonym": "kmr"
+  },
+  "kmr-arab": {
+    "autonym": "kmr-arab"
+  },
+  "kmr-latn": {
+    "autonym": "kmr-latn"
+  },
+  "kmz": {
+    "autonym": "kmz"
+  },
+  "kn": {
+    "autonym": "ಕನ್ನಡ"
+  },
+  "knc": {
+    "autonym": "Yerwa Kanuri"
+  },
+  "kne": {
+    "autonym": "kne"
+  },
+  "knn": {
+    "autonym": "knn"
+  },
+  "knq": {
+    "autonym": "knq"
+  },
+  "ko": {
+    "autonym": "한국어"
+  },
+  "ko-cn": {
+    "autonym": "ko-cn"
+  },
+  "ko-hani": {
+    "autonym": "ko-hani"
+  },
+  "ko-kore": {
+    "autonym": "ko-kore"
+  },
+  "ko-kp": {
+    "autonym": "조선말"
+  },
+  "ko-kr": {
+    "autonym": "ko-kr"
+  },
+  "koi": {
+    "autonym": "перем коми"
+  },
+  "kok": {
+    "autonym": "kok"
+  },
+  "kos": {
+    "autonym": "kos"
+  },
+  "koy": {
+    "autonym": "koy"
+  },
+  "kpe": {
+    "autonym": "kpe"
+  },
+  "kqr": {
+    "autonym": "kqr"
+  },
+  "kqt": {
+    "autonym": "kqt"
+  },
+  "kqv": {
+    "autonym": "kqv"
+  },
+  "kr": {
+    "autonym": "kanuri"
+  },
+  "krc": {
+    "autonym": "къарачай-малкъар"
+  },
+  "kri": {
+    "autonym": "Krio"
+  },
+  "krj": {
+    "autonym": "Kinaray-a"
+  },
+  "krl": {
+    "autonym": "karjal"
+  },
+  "kro": {
+    "autonym": "kro"
+  },
+  "kru": {
+    "autonym": "kru"
+  },
+  "ks": {
+    "autonym": "کٲشُر"
+  },
+  "ks-arab": {
+    "autonym": "کٲشُر"
+  },
+  "ks-deva": {
+    "autonym": "कॉशुर"
+  },
+  "ksb": {
+    "autonym": "ksb"
+  },
+  "ksf": {
+    "autonym": "Bafia"
+  },
+  "ksh": {
+    "autonym": "Ripoarisch"
+  },
+  "ksw": {
+    "autonym": "စှီၤ"
+  },
+  "ksy-beng": {
+    "autonym": "ksy-beng"
+  },
+  "ku": {
+    "autonym": "kurdî"
+  },
+  "ku-arab": {
+    "autonym": "کوردی (عەرەبی)"
+  },
+  "ku-latn": {
+    "autonym": "kurdî (latînî)"
+  },
+  "kum": {
+    "autonym": "къумукъ"
+  },
+  "kus": {
+    "autonym": "Kʋsaal"
+  },
+  "kut": {
+    "autonym": "kut"
+  },
+  "kv": {
+    "autonym": "коми"
+  },
+  "kve": {
+    "autonym": "kve"
+  },
+  "kw": {
+    "autonym": "kernowek"
+  },
+  "kwk": {
+    "autonym": "kwk"
+  },
+  "kxd": {
+    "autonym": "kxd"
+  },
+  "kxi": {
+    "autonym": "kxi"
+  },
+  "kxn": {
+    "autonym": "kxn"
+  },
+  "kxv": {
+    "autonym": "kxv"
+  },
+  "ky": {
+    "autonym": "кыргызча"
+  },
+  "kyw-beng": {
+    "autonym": "kyw-beng"
+  },
+  "kyw-deva": {
+    "autonym": "kyw-deva"
+  },
+  "la": {
+    "autonym": "Latina"
+  },
+  "lad": {
+    "autonym": "Ladino"
+  },
+  "lad-hebr": {
+    "autonym": "lad-hebr"
+  },
+  "lad-latn": {
+    "autonym": "lad-latn"
+  },
+  "lag": {
+    "autonym": "lag"
+  },
+  "lah": {
+    "autonym": "lah"
+  },
+  "laj": {
+    "autonym": "laj"
+  },
+  "lam": {
+    "autonym": "lam"
+  },
+  "lb": {
+    "autonym": "Lëtzebuergesch"
+  },
+  "lbe": {
+    "autonym": "лакку"
+  },
+  "lcm": {
+    "autonym": "lcm"
+  },
+  "ldn": {
+    "autonym": "ldn"
+  },
+  "lem": {
+    "autonym": "Nomaande"
+  },
+  "lez": {
+    "autonym": "лезги"
+  },
+  "lfn": {
+    "autonym": "Lingua Franca Nova"
+  },
+  "lg": {
+    "autonym": "Luganda"
+  },
+  "li": {
+    "autonym": "Limburgs"
+  },
+  "li-be": {
+    "autonym": "li-be"
+  },
+  "li-nl": {
+    "autonym": "li-nl"
+  },
+  "lij": {
+    "autonym": "Ligure"
+  },
+  "lij-mc": {
+    "autonym": "lij-mc"
+  },
+  "lil": {
+    "autonym": "lil"
+  },
+  "liv": {
+    "autonym": "Līvõ kēļ"
+  },
+  "ljp": {
+    "autonym": "Lampung Api"
+  },
+  "lki": {
+    "autonym": "لەکی"
+  },
+  "lkt": {
+    "autonym": "Lakȟótiyapi"
+  },
+  "lld": {
+    "autonym": "Ladin"
+  },
+  "lmn": {
+    "autonym": "lmn"
+  },
+  "lmn-deva": {
+    "autonym": "lmn-deva"
+  },
+  "lmn-knda": {
+    "autonym": "lmn-knda"
+  },
+  "lmn-taml": {
+    "autonym": "lmn-taml"
+  },
+  "lmn-telu": {
+    "autonym": "lmn-telu"
+  },
+  "lmo": {
+    "autonym": "lombard"
+  },
+  "ln": {
+    "autonym": "lingála"
+  },
+  "lns": {
+    "autonym": "Lamnso'"
+  },
+  "lo": {
+    "autonym": "ລາວ"
+  },
+  "lol": {
+    "autonym": "lol"
+  },
+  "lom": {
+    "autonym": "lom"
+  },
+  "lou": {
+    "autonym": "lou"
+  },
+  "loz": {
+    "autonym": "Silozi"
+  },
+  "lrc": {
+    "autonym": "لۊری شومالی"
+  },
+  "lsm": {
+    "autonym": "lsm"
+  },
+  "lt": {
+    "autonym": "lietuvių"
+  },
+  "ltg": {
+    "autonym": "latgaļu"
+  },
+  "lu": {
+    "autonym": "lu"
+  },
+  "lua": {
+    "autonym": "ciluba"
+  },
+  "lud": {
+    "autonym": "lud"
+  },
+  "lui": {
+    "autonym": "lui"
+  },
+  "lun": {
+    "autonym": "lun"
+  },
+  "luo": {
+    "autonym": "luo"
+  },
+  "lus": {
+    "autonym": "Mizo ţawng"
+  },
+  "lut": {
+    "autonym": "lut"
+  },
+  "luy": {
+    "autonym": "luy"
+  },
+  "luz": {
+    "autonym": "لئری دوٙمینی"
+  },
+  "lv": {
+    "autonym": "latviešu"
+  },
+  "lzh": {
+    "autonym": "文言"
+  },
+  "lzz": {
+    "autonym": "Lazuri"
+  },
+  "mad": {
+    "autonym": "Madhurâ"
+  },
+  "maf": {
+    "autonym": "maf"
+  },
+  "mag": {
+    "autonym": "मगही"
+  },
+  "mai": {
+    "autonym": "मैथिली"
+  },
+  "mak": {
+    "autonym": "mak"
+  },
+  "mak-bugi": {
+    "autonym": "mak-bugi"
+  },
+  "man": {
+    "autonym": "man"
+  },
+  "map": {
+    "autonym": "map"
+  },
+  "map-bms": {
+    "autonym": "Basa Banyumasan"
+  },
+  "mas": {
+    "autonym": "mas"
+  },
+  "maw": {
+    "autonym": "maw"
+  },
+  "mcn": {
+    "autonym": "vùn màsànà"
+  },
+  "mcp": {
+    "autonym": "Maka"
+  },
+  "mde": {
+    "autonym": "mde"
+  },
+  "mdf": {
+    "autonym": "мокшень"
+  },
+  "mdh": {
+    "autonym": "mdh"
+  },
+  "mdr": {
+    "autonym": "mdr"
+  },
+  "men": {
+    "autonym": "men"
+  },
+  "mer": {
+    "autonym": "mer"
+  },
+  "mey": {
+    "autonym": "mey"
+  },
+  "mfa": {
+    "autonym": "mfa"
+  },
+  "mfe": {
+    "autonym": "mfe"
+  },
+  "mg": {
+    "autonym": "Malagasy"
+  },
+  "mga": {
+    "autonym": "mga"
+  },
+  "mgh": {
+    "autonym": "mgh"
+  },
+  "mgo": {
+    "autonym": "mgo"
+  },
+  "mh": {
+    "autonym": "Ebon"
+  },
+  "mhk": {
+    "autonym": "mhk"
+  },
+  "mhn": {
+    "autonym": "mhn"
+  },
+  "mhr": {
+    "autonym": "олык марий"
+  },
+  "mi": {
+    "autonym": "Māori"
+  },
+  "mic": {
+    "autonym": "mic"
+  },
+  "mid": {
+    "autonym": "mid"
+  },
+  "min": {
+    "autonym": "Minangkabau"
+  },
+  "miq": {
+    "autonym": "miq"
+  },
+  "mis": {
+    "autonym": "mis"
+  },
+  "mix": {
+    "autonym": "mix"
+  },
+  "mjd": {
+    "autonym": "mjd"
+  },
+  "mjx-beng": {
+    "autonym": "mjx-beng"
+  },
+  "mk": {
+    "autonym": "македонски"
+  },
+  "mkh": {
+    "autonym": "mkh"
+  },
+  "ml": {
+    "autonym": "മലയാളം"
+  },
+  "mn": {
+    "autonym": "монгол"
+  },
+  "mn-cyrl": {
+    "autonym": "mn-cyrl"
+  },
+  "mn-mong": {
+    "autonym": "mn-mong"
+  },
+  "mnc": {
+    "autonym": "manju gisun"
+  },
+  "mnc-latn": {
+    "autonym": "manju gisun"
+  },
+  "mnc-mong": {
+    "autonym": "ᠮᠠᠨᠵᡠ ᡤᡳᠰᡠᠨ"
+  },
+  "mni": {
+    "autonym": "ꯃꯤꯇꯩ ꯂꯣꯟ"
+  },
+  "mni-beng": {
+    "autonym": "mni-beng"
+  },
+  "mnj": {
+    "autonym": "mnj"
+  },
+  "mno": {
+    "autonym": "mno"
+  },
+  "mnq": {
+    "autonym": "mnq"
+  },
+  "mns": {
+    "autonym": "mns"
+  },
+  "mnw": {
+    "autonym": "ဘာသာမန်"
+  },
+  "mo": {
+    "autonym": "молдовеняскэ"
+  },
+  "moe": {
+    "autonym": "moe"
+  },
+  "moh": {
+    "autonym": "moh"
+  },
+  "mos": {
+    "autonym": "moore"
+  },
+  "mr": {
+    "autonym": "मराठी"
+  },
+  "mr-modi": {
+    "autonym": "mr-modi"
+  },
+  "mrh": {
+    "autonym": "Mara"
+  },
+  "mrj": {
+    "autonym": "кырык мары"
+  },
+  "mrt": {
+    "autonym": "mrt"
+  },
+  "mrv": {
+    "autonym": "mrv"
+  },
+  "ms": {
+    "autonym": "Bahasa Melayu"
+  },
+  "ms-arab": {
+    "autonym": "بهاس ملايو"
+  },
+  "msi": {
+    "autonym": "msi"
+  },
+  "mt": {
+    "autonym": "Malti"
+  },
+  "mua": {
+    "autonym": "Mundang"
+  },
+  "mui": {
+    "autonym": "Baso Palembang"
+  },
+  "mul": {
+    "autonym": "mul"
+  },
+  "mun": {
+    "autonym": "mun"
+  },
+  "mus": {
+    "autonym": "Mvskoke"
+  },
+  "mvf": {
+    "autonym": "mvf"
+  },
+  "mvi": {
+    "autonym": "mvi"
+  },
+  "mvi-hira": {
+    "autonym": "mvi-hira"
+  },
+  "mvv": {
+    "autonym": "mvv"
+  },
+  "mwl": {
+    "autonym": "Mirandés"
+  },
+  "mwr": {
+    "autonym": "mwr"
+  },
+  "mwv": {
+    "autonym": "mwv"
+  },
+  "mww": {
+    "autonym": "mww"
+  },
+  "mww-latn": {
+    "autonym": "mww-latn"
+  },
+  "my": {
+    "autonym": "မြန်မာဘာသာ"
+  },
+  "mye": {
+    "autonym": "mye"
+  },
+  "myn": {
+    "autonym": "myn"
+  },
+  "myv": {
+    "autonym": "эрзянь"
+  },
+  "mzn": {
+    "autonym": "مازِرونی"
+  },
+  "na": {
+    "autonym": "Dorerin Naoero"
+  },
+  "nah": {
+    "autonym": "Nāhuatl"
+  },
+  "nai": {
+    "autonym": "nai"
+  },
+  "nan": {
+    "autonym": "閩南語 / Bân-lâm-gí"
+  },
+  "nan-hani": {
+    "autonym": "閩南語"
+  },
+  "nan-hans": {
+    "autonym": "nan-hans"
+  },
+  "nan-hant": {
+    "autonym": "閩南語（傳統漢字）"
+  },
+  "nan-latn-pehoeji": {
+    "autonym": "Bân-lâm-gí (Pe̍h-ōe-jī)"
+  },
+  "nan-latn-tailo": {
+    "autonym": "Bân-lâm-gí (Tâi-lô)"
+  },
+  "nap": {
+    "autonym": "Napulitano"
+  },
+  "naq": {
+    "autonym": "naq"
+  },
+  "nb": {
+    "autonym": "norsk bokmål"
+  },
+  "nd": {
+    "autonym": "nd"
+  },
+  "nds": {
+    "autonym": "Plattdüütsch"
+  },
+  "nds-nl": {
+    "autonym": "Nedersaksies"
+  },
+  "ne": {
+    "autonym": "नेपाली"
+  },
+  "new": {
+    "autonym": "नेपाल भाषा"
+  },
+  "new-deva": {
+    "autonym": "new-deva"
+  },
+  "new-newa": {
+    "autonym": "new-newa"
+  },
+  "ng": {
+    "autonym": "Oshiwambo"
+  },
+  "nge": {
+    "autonym": "Ngémba"
+  },
+  "nia": {
+    "autonym": "Li Niha"
+  },
+  "nic": {
+    "autonym": "nic"
+  },
+  "nit": {
+    "autonym": "కొలామి"
+  },
+  "niu": {
+    "autonym": "Niuē"
+  },
+  "njo": {
+    "autonym": "njo"
+  },
+  "nl": {
+    "autonym": "Nederlands"
+  },
+  "nl-aw": {
+    "autonym": "nl-aw"
+  },
+  "nl-be": {
+    "autonym": "nl-be"
+  },
+  "nl-cw": {
+    "autonym": "nl-cw"
+  },
+  "nl-informal": {
+    "autonym": "Nederlands (informeel)"
+  },
+  "nl-nl": {
+    "autonym": "nl-nl"
+  },
+  "nl-sr": {
+    "autonym": "nl-sr"
+  },
+  "nl-sx": {
+    "autonym": "nl-sx"
+  },
+  "nl-u-sd-bebru": {
+    "autonym": "nl-u-sd-bebru"
+  },
+  "nla": {
+    "autonym": "Ngombala"
+  },
+  "nmg": {
+    "autonym": "Kwasio"
+  },
+  "nmz": {
+    "autonym": "nawdm"
+  },
+  "nn": {
+    "autonym": "norsk nynorsk"
+  },
+  "nn-hognorsk": {
+    "autonym": "nn-hognorsk"
+  },
+  "nnh": {
+    "autonym": "Ngiemboon"
+  },
+  "nnz": {
+    "autonym": "Nda'nda'"
+  },
+  "no": {
+    "autonym": "norsk"
+  },
+  "nod": {
+    "autonym": "ᨣᩤᩴᨾᩮᩬᩥᨦ"
+  },
+  "nod-thai": {
+    "autonym": "nod-thai"
+  },
+  "nog": {
+    "autonym": "ногайша"
+  },
+  "non": {
+    "autonym": "non"
+  },
+  "non-runr": {
+    "autonym": "non-runr"
+  },
+  "nov": {
+    "autonym": "Novial"
+  },
+  "nqo": {
+    "autonym": "ߒߞߏ"
+  },
+  "nr": {
+    "autonym": "isiNdebele seSewula"
+  },
+  "nrf-gg": {
+    "autonym": "nrf-gg"
+  },
+  "nrf-je": {
+    "autonym": "nrf-je"
+  },
+  "nrm": {
+    "autonym": "Nouormand"
+  },
+  "nsk": {
+    "autonym": "nsk"
+  },
+  "nsl": {
+    "autonym": "nsl"
+  },
+  "nso": {
+    "autonym": "Sesotho sa Leboa"
+  },
+  "ntd": {
+    "autonym": "ntd"
+  },
+  "nub": {
+    "autonym": "nub"
+  },
+  "nup": {
+    "autonym": "Nupe"
+  },
+  "nus": {
+    "autonym": "nus"
+  },
+  "nv": {
+    "autonym": "Diné bizaad"
+  },
+  "nwc": {
+    "autonym": "nwc"
+  },
+  "nxm": {
+    "autonym": "nxm"
+  },
+  "ny": {
+    "autonym": "Chi-Chewa"
+  },
+  "nym": {
+    "autonym": "nym"
+  },
+  "nyn": {
+    "autonym": "runyankore"
+  },
+  "nyo": {
+    "autonym": "Orunyoro"
+  },
+  "nys": {
+    "autonym": "Nyunga"
+  },
+  "nzi": {
+    "autonym": "nzi"
+  },
+  "obt": {
+    "autonym": "obt"
+  },
+  "oc": {
+    "autonym": "occitan"
+  },
+  "oc-auvern": {
+    "autonym": "oc-auvern"
+  },
+  "oc-gascon": {
+    "autonym": "oc-gascon"
+  },
+  "oc-lemosin": {
+    "autonym": "oc-lemosin"
+  },
+  "oc-lengadoc": {
+    "autonym": "oc-lengadoc"
+  },
+  "oc-provenc": {
+    "autonym": "oc-provenc"
+  },
+  "oco": {
+    "autonym": "oco"
+  },
+  "odt": {
+    "autonym": "odt"
+  },
+  "ofs": {
+    "autonym": "ofs"
+  },
+  "oj": {
+    "autonym": "oj"
+  },
+  "ojb": {
+    "autonym": "Ojibwemowin"
+  },
+  "ojc": {
+    "autonym": "ojc"
+  },
+  "ojp": {
+    "autonym": "ojp"
+  },
+  "ojp-hani": {
+    "autonym": "ojp-hani"
+  },
+  "ojp-hira": {
+    "autonym": "ojp-hira"
+  },
+  "ojs": {
+    "autonym": "ojs"
+  },
+  "ojw": {
+    "autonym": "ojw"
+  },
+  "oka": {
+    "autonym": "oka"
+  },
+  "oki": {
+    "autonym": "oki"
+  },
+  "olo": {
+    "autonym": "livvinkarjala"
+  },
+  "om": {
+    "autonym": "Oromoo"
+  },
+  "oma": {
+    "autonym": "oma"
+  },
+  "onw": {
+    "autonym": "onw"
+  },
+  "ood": {
+    "autonym": "ood"
+  },
+  "or": {
+    "autonym": "ଓଡ଼ିଆ"
+  },
+  "os": {
+    "autonym": "ирон"
+  },
+  "osa": {
+    "autonym": "osa"
+  },
+  "osa-latn": {
+    "autonym": "Wažáže íe"
+  },
+  "osi": {
+    "autonym": "osi"
+  },
+  "osx": {
+    "autonym": "osx"
+  },
+  "ota": {
+    "autonym": "لسان عثمانى"
+  },
+  "otk": {
+    "autonym": "otk"
+  },
+  "oto": {
+    "autonym": "oto"
+  },
+  "ovd": {
+    "autonym": "ovd"
+  },
+  "owl": {
+    "autonym": "owl"
+  },
+  "oym": {
+    "autonym": "oym"
+  },
+  "pa": {
+    "autonym": "ਪੰਜਾਬੀ"
+  },
+  "pa-guru": {
+    "autonym": "pa-guru"
+  },
+  "pa-mahj": {
+    "autonym": "pa-mahj"
+  },
+  "paa": {
+    "autonym": "paa"
+  },
+  "pag": {
+    "autonym": "Pangasinan"
+  },
+  "pal": {
+    "autonym": "pal"
+  },
+  "pal-phli": {
+    "autonym": "pal-phli"
+  },
+  "pal-phlp": {
+    "autonym": "pal-phlp"
+  },
+  "pal-phlv": {
+    "autonym": "pal-phlv"
+  },
+  "pam": {
+    "autonym": "Kapampangan"
+  },
+  "pao": {
+    "autonym": "pao"
+  },
+  "pap": {
+    "autonym": "Papiamentu"
+  },
+  "pap-aw": {
+    "autonym": "Papiamento"
+  },
+  "paq": {
+    "autonym": "paq"
+  },
+  "pau": {
+    "autonym": "pau"
+  },
+  "pbb": {
+    "autonym": "pbb"
+  },
+  "pcd": {
+    "autonym": "Picard"
+  },
+  "pcd-be": {
+    "autonym": "pcd-be"
+  },
+  "pcd-fr": {
+    "autonym": "pcd-fr"
+  },
+  "pcm": {
+    "autonym": "Naijá"
+  },
+  "pdc": {
+    "autonym": "Deitsch"
+  },
+  "pdt": {
+    "autonym": "Plautdietsch"
+  },
+  "peo": {
+    "autonym": "peo"
+  },
+  "pfl": {
+    "autonym": "Pälzisch"
+  },
+  "pgd": {
+    "autonym": "pgd"
+  },
+  "pgd-arab": {
+    "autonym": "pgd-arab"
+  },
+  "pgd-deva": {
+    "autonym": "pgd-deva"
+  },
+  "pgd-khar": {
+    "autonym": "pgd-khar"
+  },
+  "pgl": {
+    "autonym": "pgl"
+  },
+  "phi": {
+    "autonym": "phi"
+  },
+  "phl": {
+    "autonym": "phl"
+  },
+  "phn": {
+    "autonym": "phn"
+  },
+  "phn-latn": {
+    "autonym": "phn-latn"
+  },
+  "phn-phnx": {
+    "autonym": "phn-phnx"
+  },
+  "phr": {
+    "autonym": "phr"
+  },
+  "pi": {
+    "autonym": "पालि"
+  },
+  "pi-sidd": {
+    "autonym": "pi-sidd"
+  },
+  "pih": {
+    "autonym": "Norfuk / Pitkern"
+  },
+  "pis": {
+    "autonym": "pis"
+  },
+  "pjt": {
+    "autonym": "pjt"
+  },
+  "pkc": {
+    "autonym": "pkc"
+  },
+  "pko": {
+    "autonym": "pko"
+  },
+  "pks": {
+    "autonym": "pks"
+  },
+  "pl": {
+    "autonym": "polski"
+  },
+  "plu": {
+    "autonym": "plu"
+  },
+  "plv": {
+    "autonym": "plv"
+  },
+  "plw": {
+    "autonym": "plw"
+  },
+  "pms": {
+    "autonym": "Piemontèis"
+  },
+  "pnb": {
+    "autonym": "پنجابی"
+  },
+  "pnt": {
+    "autonym": "Ποντιακά"
+  },
+  "pon": {
+    "autonym": "pon"
+  },
+  "pov": {
+    "autonym": "pov"
+  },
+  "pox": {
+    "autonym": "pox"
+  },
+  "ppl": {
+    "autonym": "Nawat"
+  },
+  "ppu": {
+    "autonym": "ppu"
+  },
+  "pqm": {
+    "autonym": "pqm"
+  },
+  "pra": {
+    "autonym": "pra"
+  },
+  "prc": {
+    "autonym": "prc"
+  },
+  "prg": {
+    "autonym": "prūsiskan"
+  },
+  "pro": {
+    "autonym": "pro"
+  },
+  "prs": {
+    "autonym": "prs"
+  },
+  "ps": {
+    "autonym": "پښتو"
+  },
+  "ps-af": {
+    "autonym": "ps-af"
+  },
+  "ps-pk": {
+    "autonym": "ps-pk"
+  },
+  "psh": {
+    "autonym": "psh"
+  },
+  "psi": {
+    "autonym": "psi"
+  },
+  "psu": {
+    "autonym": "psu"
+  },
+  "psu-arab": {
+    "autonym": "psu-arab"
+  },
+  "psu-brah": {
+    "autonym": "psu-brah"
+  },
+  "psu-deva": {
+    "autonym": "psu-deva"
+  },
+  "psu-guru": {
+    "autonym": "psu-guru"
+  },
+  "pt": {
+    "autonym": "português"
+  },
+  "pt-ao1990": {
+    "autonym": "pt-ao1990"
+  },
+  "pt-br": {
+    "autonym": "português do Brasil"
+  },
+  "pt-colb1945": {
+    "autonym": "pt-colb1945"
+  },
+  "pt-pt": {
+    "autonym": "pt-pt"
+  },
+  "pwn": {
+    "autonym": "pinayuanan"
+  },
+  "pwo": {
+    "autonym": "pwo"
+  },
+  "pyu": {
+    "autonym": "pyu"
+  },
+  "pzh": {
+    "autonym": "pzh"
+  },
+  "qu": {
+    "autonym": "Runa Simi"
+  },
+  "quc": {
+    "autonym": "Qatzijob\\ʼal"
+  },
+  "qug": {
+    "autonym": "Runa shimi"
+  },
+  "qwh": {
+    "autonym": "qwh"
+  },
+  "qxp": {
+    "autonym": "qxp"
+  },
+  "qxq": {
+    "autonym": "qxq"
+  },
+  "qya": {
+    "autonym": "qya"
+  },
+  "rag": {
+    "autonym": "rag"
+  },
+  "rah": {
+    "autonym": "rah"
+  },
+  "raj": {
+    "autonym": "raj"
+  },
+  "rap": {
+    "autonym": "rap"
+  },
+  "rar": {
+    "autonym": "rar"
+  },
+  "rcf": {
+    "autonym": "rcf"
+  },
+  "rej": {
+    "autonym": "rej"
+  },
+  "rgn": {
+    "autonym": "Rumagnôl"
+  },
+  "rhg": {
+    "autonym": "rhg"
+  },
+  "rhg-arab": {
+    "autonym": "rhg-arab"
+  },
+  "rhg-rohg": {
+    "autonym": "rhg-rohg"
+  },
+  "rif": {
+    "autonym": "Tarifit"
+  },
+  "rji": {
+    "autonym": "rji"
+  },
+  "rki": {
+    "autonym": "ရခိုင်"
+  },
+  "rkt": {
+    "autonym": "rkt"
+  },
+  "rm": {
+    "autonym": "rumantsch"
+  },
+  "rm-puter": {
+    "autonym": "rm-puter"
+  },
+  "rm-rumgr": {
+    "autonym": "rm-rumgr"
+  },
+  "rm-surmiran": {
+    "autonym": "rm-surmiran"
+  },
+  "rm-sursilv": {
+    "autonym": "rm-sursilv"
+  },
+  "rm-sutsilv": {
+    "autonym": "rm-sutsilv"
+  },
+  "rm-vallader": {
+    "autonym": "rm-vallader"
+  },
+  "rmc": {
+    "autonym": "romaňi čhib"
+  },
+  "rmf": {
+    "autonym": "kaalengo tšimb"
+  },
+  "rmg": {
+    "autonym": "rmg"
+  },
+  "rml": {
+    "autonym": "rml"
+  },
+  "rml-cyrl": {
+    "autonym": "rml-cyrl"
+  },
+  "rmn": {
+    "autonym": "rmn"
+  },
+  "rmo": {
+    "autonym": "rmo"
+  },
+  "rmw": {
+    "autonym": "rmw"
+  },
+  "rmy": {
+    "autonym": "romani čhib"
+  },
+  "rn": {
+    "autonym": "ikirundi"
+  },
+  "rnp": {
+    "autonym": "rnp"
+  },
+  "ro": {
+    "autonym": "română"
+  },
+  "ro-md": {
+    "autonym": "ro-md"
+  },
+  "roa": {
+    "autonym": "roa"
+  },
+  "roa-rup": {
+    "autonym": "armãneashti"
+  },
+  "roa-tara": {
+    "autonym": "tarandíne"
+  },
+  "rof": {
+    "autonym": "rof"
+  },
+  "rom": {
+    "autonym": "rom"
+  },
+  "rsk": {
+    "autonym": "руски"
+  },
+  "rtm": {
+    "autonym": "rtm"
+  },
+  "ru": {
+    "autonym": "русский"
+  },
+  "ru-petr1708": {
+    "autonym": "ru-petr1708"
+  },
+  "rue": {
+    "autonym": "русиньскый"
+  },
+  "rug": {
+    "autonym": "rug"
+  },
+  "ruo": {
+    "autonym": "ruo"
+  },
+  "rup": {
+    "autonym": "armãneashti"
+  },
+  "ruq": {
+    "autonym": "Vlăheşte"
+  },
+  "ruq-cyrl": {
+    "autonym": "Влахесте"
+  },
+  "ruq-latn": {
+    "autonym": "Vlăheşte"
+  },
+  "rut": {
+    "autonym": "мыхаӀбишды"
+  },
+  "rw": {
+    "autonym": "Ikinyarwanda"
+  },
+  "rwk": {
+    "autonym": "rwk"
+  },
+  "rwr": {
+    "autonym": "मारवाड़ी"
+  },
+  "rys": {
+    "autonym": "rys"
+  },
+  "rys-hira": {
+    "autonym": "rys-hira"
+  },
+  "ryu": {
+    "autonym": "沖縄口"
+  },
+  "ryu-hira": {
+    "autonym": "ryu-hira"
+  },
+  "sa": {
+    "autonym": "संस्कृतम्"
+  },
+  "sa-sidd": {
+    "autonym": "sa-sidd"
+  },
+  "sad": {
+    "autonym": "sad"
+  },
+  "sah": {
+    "autonym": "саха тыла"
+  },
+  "sai": {
+    "autonym": "sai"
+  },
+  "sal": {
+    "autonym": "sal"
+  },
+  "sam": {
+    "autonym": "sam"
+  },
+  "saq": {
+    "autonym": "saq"
+  },
+  "sas": {
+    "autonym": "Sasak"
+  },
+  "sat": {
+    "autonym": "ᱥᱟᱱᱛᱟᱲᱤ"
+  },
+  "sat-beng": {
+    "autonym": "sat-beng"
+  },
+  "sat-latn": {
+    "autonym": "sat-latn"
+  },
+  "sat-orya": {
+    "autonym": "sat-orya"
+  },
+  "saz": {
+    "autonym": "saz"
+  },
+  "sba": {
+    "autonym": "sba"
+  },
+  "sbp": {
+    "autonym": "sbp"
+  },
+  "sc": {
+    "autonym": "sardu"
+  },
+  "sci": {
+    "autonym": "sci"
+  },
+  "scl": {
+    "autonym": "scl"
+  },
+  "scn": {
+    "autonym": "sicilianu"
+  },
+  "sco": {
+    "autonym": "Scots"
+  },
+  "scz": {
+    "autonym": "scz"
+  },
+  "sd": {
+    "autonym": "سنڌي"
+  },
+  "sd-deva": {
+    "autonym": "sd-deva"
+  },
+  "sd-gujr": {
+    "autonym": "sd-gujr"
+  },
+  "sd-khoj": {
+    "autonym": "sd-khoj"
+  },
+  "sd-sind": {
+    "autonym": "sd-sind"
+  },
+  "sdc": {
+    "autonym": "Sassaresu"
+  },
+  "sdh": {
+    "autonym": "کوردی خوارگ"
+  },
+  "sdh-arab": {
+    "autonym": "sdh-arab"
+  },
+  "sdh-latn": {
+    "autonym": "sdh-latn"
+  },
+  "sdo": {
+    "autonym": "sdo"
+  },
+  "se": {
+    "autonym": "davvisámegiella"
+  },
+  "se-fi": {
+    "autonym": "davvisámegiella (Suoma bealde)"
+  },
+  "se-no": {
+    "autonym": "davvisámegiella (Norgga bealde)"
+  },
+  "se-se": {
+    "autonym": "davvisámegiella (Ruoŧa bealde)"
+  },
+  "sea": {
+    "autonym": "sea"
+  },
+  "see": {
+    "autonym": "see"
+  },
+  "seh": {
+    "autonym": "seh"
+  },
+  "sei": {
+    "autonym": "Cmique Itom"
+  },
+  "sel": {
+    "autonym": "sel"
+  },
+  "sem": {
+    "autonym": "sem"
+  },
+  "ser": {
+    "autonym": "ser"
+  },
+  "ses": {
+    "autonym": "Koyraboro Senni"
+  },
+  "sfb": {
+    "autonym": "sfb"
+  },
+  "sg": {
+    "autonym": "Sängö"
+  },
+  "sga": {
+    "autonym": "sga"
+  },
+  "sgh": {
+    "autonym": "sgh"
+  },
+  "sgh-arab": {
+    "autonym": "sgh-arab"
+  },
+  "sgh-cyrl": {
+    "autonym": "sgh-cyrl"
+  },
+  "sgh-latn": {
+    "autonym": "sgh-latn"
+  },
+  "sgn": {
+    "autonym": "sgn"
+  },
+  "sgs": {
+    "autonym": "žemaitėška"
+  },
+  "sgy-arab": {
+    "autonym": "sgy-arab"
+  },
+  "sgy-latn": {
+    "autonym": "sgy-latn"
+  },
+  "sh": {
+    "autonym": "srpskohrvatski / српскохрватски"
+  },
+  "sh-cyrl": {
+    "autonym": "српскохрватски (ћирилица)"
+  },
+  "sh-latn": {
+    "autonym": "srpskohrvatski (latinica)"
+  },
+  "shd": {
+    "autonym": "shd"
+  },
+  "shi": {
+    "autonym": "Taclḥit"
+  },
+  "shi-latn": {
+    "autonym": "Taclḥit"
+  },
+  "shi-tfng": {
+    "autonym": "ⵜⴰⵛⵍⵃⵉⵜ"
+  },
+  "shn": {
+    "autonym": "တႆး"
+  },
+  "shu": {
+    "autonym": "shu"
+  },
+  "shy": {
+    "autonym": "tacawit"
+  },
+  "shy-arab": {
+    "autonym": "shy-arab"
+  },
+  "shy-latn": {
+    "autonym": "tacawit"
+  },
+  "shy-tfng": {
+    "autonym": "shy-tfng"
+  },
+  "si": {
+    "autonym": "සිංහල"
+  },
+  "sia": {
+    "autonym": "sia"
+  },
+  "sid": {
+    "autonym": "sid"
+  },
+  "sio": {
+    "autonym": "sio"
+  },
+  "sit": {
+    "autonym": "sit"
+  },
+  "sjd": {
+    "autonym": "кӣллт са̄мь кӣлл"
+  },
+  "sje": {
+    "autonym": "bidumsámegiella"
+  },
+  "sjk": {
+    "autonym": "sjk"
+  },
+  "sjn": {
+    "autonym": "sjn"
+  },
+  "sjo": {
+    "autonym": "sjo"
+  },
+  "sjs": {
+    "autonym": "sjs"
+  },
+  "sjt": {
+    "autonym": "sjt"
+  },
+  "sju": {
+    "autonym": "ubmejesámiengiälla"
+  },
+  "sk": {
+    "autonym": "slovenčina"
+  },
+  "skr": {
+    "autonym": "سرائیکی"
+  },
+  "skr-arab": {
+    "autonym": "سرائیکی"
+  },
+  "sl": {
+    "autonym": "slovenščina"
+  },
+  "sla": {
+    "autonym": "sla"
+  },
+  "slh": {
+    "autonym": "slh"
+  },
+  "sli": {
+    "autonym": "Schläsch"
+  },
+  "slr": {
+    "autonym": "slr"
+  },
+  "sly": {
+    "autonym": "sly"
+  },
+  "sm": {
+    "autonym": "Gagana Samoa"
+  },
+  "sma": {
+    "autonym": "åarjelsaemien"
+  },
+  "smi": {
+    "autonym": "smi"
+  },
+  "smj": {
+    "autonym": "julevsámegiella"
+  },
+  "smn": {
+    "autonym": "anarâškielâ"
+  },
+  "sms": {
+    "autonym": "nuõrttsääʹmǩiõll"
+  },
+  "sn": {
+    "autonym": "chiShona"
+  },
+  "sne": {
+    "autonym": "sne"
+  },
+  "snk": {
+    "autonym": "snk"
+  },
+  "so": {
+    "autonym": "Soomaaliga"
+  },
+  "sog": {
+    "autonym": "sog"
+  },
+  "son": {
+    "autonym": "son"
+  },
+  "spv": {
+    "autonym": "spv"
+  },
+  "sq": {
+    "autonym": "shqip"
+  },
+  "sr": {
+    "autonym": "српски / srpski"
+  },
+  "sr-cyrl": {
+    "autonym": "српски (ћирилица)"
+  },
+  "sr-ec": {
+    "autonym": "српски (ћирилица)"
+  },
+  "sr-el": {
+    "autonym": "srpski (latinica)"
+  },
+  "sr-latn": {
+    "autonym": "srpski (latinica)"
+  },
+  "sr-me": {
+    "autonym": "sr-me"
+  },
+  "srh-arab": {
+    "autonym": "srh-arab"
+  },
+  "srh-cyrl": {
+    "autonym": "srh-cyrl"
+  },
+  "srh-latn": {
+    "autonym": "srh-latn"
+  },
+  "srk": {
+    "autonym": "srk"
+  },
+  "srn": {
+    "autonym": "Sranantongo"
+  },
+  "sro": {
+    "autonym": "sardu campidanesu"
+  },
+  "srq": {
+    "autonym": "mbia cheë"
+  },
+  "srr": {
+    "autonym": "srr"
+  },
+  "ss": {
+    "autonym": "SiSwati"
+  },
+  "ssa": {
+    "autonym": "ssa"
+  },
+  "ssb": {
+    "autonym": "ssb"
+  },
+  "ssf": {
+    "autonym": "ssf"
+  },
+  "ssy": {
+    "autonym": "ssy"
+  },
+  "st": {
+    "autonym": "Sesotho"
+  },
+  "sth": {
+    "autonym": "sth"
+  },
+  "stq": {
+    "autonym": "Seeltersk"
+  },
+  "str": {
+    "autonym": "str"
+  },
+  "sty": {
+    "autonym": "себертатар"
+  },
+  "su": {
+    "autonym": "Sunda"
+  },
+  "suk": {
+    "autonym": "suk"
+  },
+  "sus": {
+    "autonym": "sus"
+  },
+  "sux": {
+    "autonym": "sux"
+  },
+  "sux-latn": {
+    "autonym": "sux-latn"
+  },
+  "sux-xsux": {
+    "autonym": "sux-xsux"
+  },
+  "suz": {
+    "autonym": "suz"
+  },
+  "sv": {
+    "autonym": "svenska"
+  },
+  "sva": {
+    "autonym": "ლუშნუ"
+  },
+  "svm": {
+    "autonym": "svm"
+  },
+  "sw": {
+    "autonym": "Kiswahili"
+  },
+  "sw-arab": {
+    "autonym": "sw-arab"
+  },
+  "sw-arab-cd": {
+    "autonym": "sw-arab-cd"
+  },
+  "sw-arab-mz": {
+    "autonym": "sw-arab-mz"
+  },
+  "sw-cd": {
+    "autonym": "sw-cd"
+  },
+  "swb": {
+    "autonym": "swb"
+  },
+  "sxr": {
+    "autonym": "sxr"
+  },
+  "sxu": {
+    "autonym": "sxu"
+  },
+  "syc": {
+    "autonym": "syc"
+  },
+  "syl": {
+    "autonym": "ꠍꠤꠟꠐꠤ"
+  },
+  "syl-beng": {
+    "autonym": "syl-beng"
+  },
+  "syl-sylo": {
+    "autonym": "syl-sylo"
+  },
+  "syr": {
+    "autonym": "syr"
+  },
+  "szl": {
+    "autonym": "ślůnski"
+  },
+  "szy": {
+    "autonym": "Sakizaya"
+  },
+  "ta": {
+    "autonym": "தமிழ்"
+  },
+  "tai": {
+    "autonym": "tai"
+  },
+  "tao": {
+    "autonym": "tao"
+  },
+  "tay": {
+    "autonym": "Tayal"
+  },
+  "tbl": {
+    "autonym": "tbl"
+  },
+  "tce": {
+    "autonym": "tce"
+  },
+  "tcy": {
+    "autonym": "ತುಳು"
+  },
+  "tdd": {
+    "autonym": "ᥖᥭᥰ ᥖᥬᥲ ᥑᥨᥒᥰ"
+  },
+  "te": {
+    "autonym": "తెలుగు"
+  },
+  "tem": {
+    "autonym": "tem"
+  },
+  "teo": {
+    "autonym": "teo"
+  },
+  "ter": {
+    "autonym": "ter"
+  },
+  "tet": {
+    "autonym": "tetun"
+  },
+  "tg": {
+    "autonym": "тоҷикӣ"
+  },
+  "tg-cyrl": {
+    "autonym": "тоҷикӣ"
+  },
+  "tg-latn": {
+    "autonym": "tojikī"
+  },
+  "tgx": {
+    "autonym": "tgx"
+  },
+  "th": {
+    "autonym": "ไทย"
+  },
+  "thq": {
+    "autonym": "काेचिला थारु"
+  },
+  "thr": {
+    "autonym": "thr"
+  },
+  "tht": {
+    "autonym": "tht"
+  },
+  "ti": {
+    "autonym": "ትግርኛ"
+  },
+  "tig": {
+    "autonym": "ትግሬ"
+  },
+  "tih": {
+    "autonym": "tih"
+  },
+  "tiv": {
+    "autonym": "tiv"
+  },
+  "tji": {
+    "autonym": "tji"
+  },
+  "tk": {
+    "autonym": "Türkmençe"
+  },
+  "tkl": {
+    "autonym": "tkl"
+  },
+  "tkr": {
+    "autonym": "tkr"
+  },
+  "tl": {
+    "autonym": "Tagalog"
+  },
+  "tlb": {
+    "autonym": "tlb"
+  },
+  "tlh": {
+    "autonym": "tlh"
+  },
+  "tlh-latn": {
+    "autonym": "tlh-latn"
+  },
+  "tlh-piqd": {
+    "autonym": "tlh-piqd"
+  },
+  "tli": {
+    "autonym": "tli"
+  },
+  "tly": {
+    "autonym": "tolışi"
+  },
+  "tly-cyrl": {
+    "autonym": "толыши"
+  },
+  "tmh": {
+    "autonym": "tmh"
+  },
+  "tmr": {
+    "autonym": "tmr"
+  },
+  "tn": {
+    "autonym": "Setswana"
+  },
+  "tnq": {
+    "autonym": "tnq"
+  },
+  "to": {
+    "autonym": "lea faka-Tonga"
+  },
+  "tog": {
+    "autonym": "tog"
+  },
+  "toi": {
+    "autonym": "toi"
+  },
+  "tok": {
+    "autonym": "toki pona"
+  },
+  "tpi": {
+    "autonym": "Tok Pisin"
+  },
+  "tpv": {
+    "autonym": "Tanapag"
+  },
+  "tr": {
+    "autonym": "Türkçe"
+  },
+  "trp": {
+    "autonym": "trp"
+  },
+  "tru": {
+    "autonym": "Ṫuroyo"
+  },
+  "trv": {
+    "autonym": "Seediq"
+  },
+  "trw": {
+    "autonym": "trw"
+  },
+  "ts": {
+    "autonym": "Xitsonga"
+  },
+  "tsd": {
+    "autonym": "tsd"
+  },
+  "tsg": {
+    "autonym": "tsg"
+  },
+  "tsi": {
+    "autonym": "tsi"
+  },
+  "tsu": {
+    "autonym": "tsu"
+  },
+  "tsw": {
+    "autonym": "tsw"
+  },
+  "tt": {
+    "autonym": "татарча / tatarça"
+  },
+  "tt-cyrl": {
+    "autonym": "татарча"
+  },
+  "tt-latn": {
+    "autonym": "tatarça"
+  },
+  "ttj": {
+    "autonym": "Orutooro"
+  },
+  "ttm": {
+    "autonym": "ttm"
+  },
+  "ttt": {
+    "autonym": "ttt"
+  },
+  "tui": {
+    "autonym": "tui"
+  },
+  "tum": {
+    "autonym": "chiTumbuka"
+  },
+  "tup": {
+    "autonym": "tup"
+  },
+  "tut": {
+    "autonym": "tut"
+  },
+  "tvl": {
+    "autonym": "tvl"
+  },
+  "tvu": {
+    "autonym": "Tunen"
+  },
+  "tw": {
+    "autonym": "Twi"
+  },
+  "twd": {
+    "autonym": "twd"
+  },
+  "twq": {
+    "autonym": "twq"
+  },
+  "txa": {
+    "autonym": "txa"
+  },
+  "txg": {
+    "autonym": "txg"
+  },
+  "txo-beng": {
+    "autonym": "txo-beng"
+  },
+  "txo-toto": {
+    "autonym": "txo-toto"
+  },
+  "txx": {
+    "autonym": "txx"
+  },
+  "ty": {
+    "autonym": "reo tahiti"
+  },
+  "tyv": {
+    "autonym": "тыва дыл"
+  },
+  "tzl": {
+    "autonym": "tzl"
+  },
+  "tzm": {
+    "autonym": "ⵜⴰⵎⴰⵣⵉⵖⵜ"
+  },
+  "tzo": {
+    "autonym": "tzo"
+  },
+  "udm": {
+    "autonym": "удмурт"
+  },
+  "ug": {
+    "autonym": "ئۇيغۇرچە / Uyghurche"
+  },
+  "ug-arab": {
+    "autonym": "ئۇيغۇرچە"
+  },
+  "ug-cyrl": {
+    "autonym": "ug-cyrl"
+  },
+  "ug-latn": {
+    "autonym": "Uyghurche"
+  },
+  "uga": {
+    "autonym": "uga"
+  },
+  "uk": {
+    "autonym": "українська"
+  },
+  "ulc": {
+    "autonym": "ulc"
+  },
+  "uln": {
+    "autonym": "uln"
+  },
+  "umb": {
+    "autonym": "umb"
+  },
+  "umu": {
+    "autonym": "umu"
+  },
+  "und": {
+    "autonym": "und"
+  },
+  "unr": {
+    "autonym": "unr"
+  },
+  "unr-deva": {
+    "autonym": "unr-deva"
+  },
+  "unr-nagm": {
+    "autonym": "unr-nagm"
+  },
+  "uon": {
+    "autonym": "uon"
+  },
+  "ur": {
+    "autonym": "اردو"
+  },
+  "urk": {
+    "autonym": "urk"
+  },
+  "ush": {
+    "autonym": "ush"
+  },
+  "uun": {
+    "autonym": "uun"
+  },
+  "uz": {
+    "autonym": "oʻzbekcha / ўзбекча"
+  },
+  "uz-cyrl": {
+    "autonym": "ўзбекча"
+  },
+  "uz-latn": {
+    "autonym": "oʻzbekcha"
+  },
+  "uzs": {
+    "autonym": "uzs"
+  },
+  "vai": {
+    "autonym": "vai"
+  },
+  "ve": {
+    "autonym": "Tshivenda"
+  },
+  "vec": {
+    "autonym": "vèneto"
+  },
+  "vep": {
+    "autonym": "vepsän kel’"
+  },
+  "vgt": {
+    "autonym": "vgt"
+  },
+  "vi": {
+    "autonym": "Tiếng Việt"
+  },
+  "vi-hani": {
+    "autonym": "vi-hani"
+  },
+  "vls": {
+    "autonym": "West-Vlams"
+  },
+  "vls-be": {
+    "autonym": "vls-be"
+  },
+  "vls-fr": {
+    "autonym": "vls-fr"
+  },
+  "vls-nl": {
+    "autonym": "vls-nl"
+  },
+  "vmf": {
+    "autonym": "Mainfränkisch"
+  },
+  "vmw": {
+    "autonym": "emakhuwa"
+  },
+  "vo": {
+    "autonym": "Volapük"
+  },
+  "vot": {
+    "autonym": "Vaďďa"
+  },
+  "vro": {
+    "autonym": "võro"
+  },
+  "vun": {
+    "autonym": "vun"
+  },
+  "vut": {
+    "autonym": "Vute"
+  },
+  "wa": {
+    "autonym": "walon"
+  },
+  "wae": {
+    "autonym": "wae"
+  },
+  "wak": {
+    "autonym": "wak"
+  },
+  "wal": {
+    "autonym": "wolaytta"
+  },
+  "war": {
+    "autonym": "Winaray"
+  },
+  "was": {
+    "autonym": "was"
+  },
+  "way": {
+    "autonym": "way"
+  },
+  "wbl-arab": {
+    "autonym": "wbl-arab"
+  },
+  "wbl-arab-af": {
+    "autonym": "wbl-arab-af"
+  },
+  "wbl-arab-cn": {
+    "autonym": "wbl-arab-cn"
+  },
+  "wbl-arab-pk": {
+    "autonym": "wbl-arab-pk"
+  },
+  "wbl-cyrl": {
+    "autonym": "wbl-cyrl"
+  },
+  "wbl-latn": {
+    "autonym": "wbl-latn"
+  },
+  "wbp": {
+    "autonym": "wbp"
+  },
+  "wen": {
+    "autonym": "wen"
+  },
+  "wes": {
+    "autonym": "Pidgin (Cameroon)"
+  },
+  "wlm": {
+    "autonym": "wlm"
+  },
+  "wls": {
+    "autonym": "Fakaʻuvea"
+  },
+  "wlx": {
+    "autonym": "waale"
+  },
+  "wo": {
+    "autonym": "Wolof"
+  },
+  "wsg": {
+    "autonym": "wsg"
+  },
+  "wsv": {
+    "autonym": "wsv"
+  },
+  "wuu": {
+    "autonym": "吴语"
+  },
+  "wuu-hans": {
+    "autonym": "吴语（简体）"
+  },
+  "wuu-hant": {
+    "autonym": "吳語（正體）"
+  },
+  "wya": {
+    "autonym": "Wyandot"
+  },
+  "wyi": {
+    "autonym": "wyi"
+  },
+  "xal": {
+    "autonym": "хальмг"
+  },
+  "xaq": {
+    "autonym": "xaq"
+  },
+  "xbm": {
+    "autonym": "xbm"
+  },
+  "xh": {
+    "autonym": "isiXhosa"
+  },
+  "xmf": {
+    "autonym": "მარგალური"
+  },
+  "xmm": {
+    "autonym": "xmm"
+  },
+  "xnb": {
+    "autonym": "xnb"
+  },
+  "xno": {
+    "autonym": "xno"
+  },
+  "xnr": {
+    "autonym": "xnr"
+  },
+  "xnr-deva": {
+    "autonym": "xnr-deva"
+  },
+  "xnr-takr": {
+    "autonym": "xnr-takr"
+  },
+  "xog": {
+    "autonym": "xog"
+  },
+  "xon": {
+    "autonym": "xon"
+  },
+  "xpu": {
+    "autonym": "xpu"
+  },
+  "xsu": {
+    "autonym": "xsu"
+  },
+  "xsy": {
+    "autonym": "saisiyat"
+  },
+  "yag": {
+    "autonym": "yag"
+  },
+  "yah-cyrl": {
+    "autonym": "yah-cyrl"
+  },
+  "yah-latn": {
+    "autonym": "yah-latn"
+  },
+  "yai-cyrl": {
+    "autonym": "yai-cyrl"
+  },
+  "yai-latn": {
+    "autonym": "yai-latn"
+  },
+  "yao": {
+    "autonym": "yao"
+  },
+  "yap": {
+    "autonym": "yap"
+  },
+  "yas": {
+    "autonym": "Nugunu"
+  },
+  "yat": {
+    "autonym": "Yambeta"
+  },
+  "yav": {
+    "autonym": "Yangben"
+  },
+  "ybb": {
+    "autonym": "Yemba"
+  },
+  "ydd": {
+    "autonym": "ydd"
+  },
+  "ydg": {
+    "autonym": "ydg"
+  },
+  "yec": {
+    "autonym": "yec"
+  },
+  "yi": {
+    "autonym": "ייִדיש"
+  },
+  "ykg": {
+    "autonym": "ykg"
+  },
+  "yo": {
+    "autonym": "Yorùbá"
+  },
+  "yoi": {
+    "autonym": "yoi"
+  },
+  "yoi-hira": {
+    "autonym": "yoi-hira"
+  },
+  "yox": {
+    "autonym": "yox"
+  },
+  "yox-hira": {
+    "autonym": "yox-hira"
+  },
+  "ypk": {
+    "autonym": "ypk"
+  },
+  "yrk": {
+    "autonym": "yrk"
+  },
+  "yrl": {
+    "autonym": "Nhẽẽgatú"
+  },
+  "yua": {
+    "autonym": "maaya t’aan"
+  },
+  "yue": {
+    "autonym": "粵語"
+  },
+  "yue-hans": {
+    "autonym": "粵语（简体）"
+  },
+  "yue-hant": {
+    "autonym": "粵語（繁體）"
+  },
+  "za": {
+    "autonym": "Vahcuengh"
+  },
+  "zai": {
+    "autonym": "zai"
+  },
+  "zap": {
+    "autonym": "zap"
+  },
+  "zbl": {
+    "autonym": "zbl"
+  },
+  "zea": {
+    "autonym": "Zeêuws"
+  },
+  "zen": {
+    "autonym": "zen"
+  },
+  "zgh": {
+    "autonym": "ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⴰⵏⴰⵡⴰⵢⵜ"
+  },
+  "zgh-latn": {
+    "autonym": "tamaziɣt tanawayt"
+  },
+  "zh": {
+    "autonym": "中文"
+  },
+  "zh-classical": {
+    "autonym": "文言"
+  },
+  "zh-cn": {
+    "autonym": "中文（中国大陆）"
+  },
+  "zh-hans": {
+    "autonym": "中文（简体）"
+  },
+  "zh-hant": {
+    "autonym": "中文（繁體）"
+  },
+  "zh-hk": {
+    "autonym": "中文（香港）"
+  },
+  "zh-min-nan": {
+    "autonym": "閩南語 / Bân-lâm-gí"
+  },
+  "zh-mo": {
+    "autonym": "中文（澳門）"
+  },
+  "zh-my": {
+    "autonym": "中文（马来西亚）"
+  },
+  "zh-sg": {
+    "autonym": "中文（新加坡）"
+  },
+  "zh-tw": {
+    "autonym": "中文（臺灣）"
+  },
+  "zh-yue": {
+    "autonym": "粵語"
+  },
+  "zmi": {
+    "autonym": "zmi"
+  },
+  "znd": {
+    "autonym": "znd"
+  },
+  "zpu": {
+    "autonym": "zpu"
+  },
+  "zu": {
+    "autonym": "isiZulu"
+  },
+  "zun": {
+    "autonym": "zun"
+  },
+  "zxx": {
+    "autonym": "zxx"
+  },
+  "zza": {
+    "autonym": "zza"
+  }
+}
