@@ -12,6 +12,8 @@ import {
   SKIP_EASE,
   SKIP_ROTATION,
   STACK_STEP,
+  SUBMIT_REVEAL_DURATION,
+  SUBMIT_REVEAL_EASE,
   TOAST_DISMISS_GRACE,
   TOAST_DURATION,
 } from './CardViewConfig';
@@ -40,6 +42,8 @@ export function useCardSkip({
   onUndo,
 }) {
   const toast = ref(null);
+  const isExiting = ref(false);
+  const isStacked = ref(false);
 
   let isAnimating = false;
   let lastSkipped = null;
@@ -55,13 +59,110 @@ export function useCardSkip({
     return ghost;
   };
 
-  const settle = (animations, usedGhosts) =>
+  const settle = (animations, usedGhosts, after) =>
     Promise.allSettled(animations.map((animation) => animation.finished)).then(() => {
       usedGhosts.forEach((ghost) => {
         ghost.remove();
         ghosts.delete(ghost);
       });
       isAnimating = false;
+      after?.();
+    });
+
+  const createExitLayer = () => {
+    const layer = document.createElement('div');
+
+    Object.assign(layer.style, {
+      position: 'fixed',
+      inset: '0',
+      zIndex: '1000',
+      overflow: 'hidden',
+      pointerEvents: 'none',
+    });
+
+    document.body.appendChild(layer);
+    ghosts.add(layer);
+    return layer;
+  };
+
+    const flyOffHorizontally = ({ rotation, duration, easing }) => {
+    const card = cardRef.value;
+    const rect = card.getBoundingClientRect();
+    const rtl = getComputedStyle(card).direction === 'rtl';
+    const layer = createExitLayer();
+    const ghost = card.cloneNode(true);
+
+    ghost.querySelectorAll('[id]').forEach((node) => node.removeAttribute('id'));
+    ghost.removeAttribute('id');
+    ghost.setAttribute('aria-hidden', 'true');
+
+    Object.assign(ghost.style, {
+      position: 'absolute',
+      top: `${rect.top}px`,
+      left: `${rect.left}px`,
+      width: `${rect.width}px`,
+      height: `${rect.height}px`,
+      maxHeight: 'none',
+      margin: '0',
+      boxSizing: 'border-box',
+      zIndex: '1',
+      transform: 'none',
+      opacity: '1',
+      viewTransitionName: 'none',
+    });
+
+    const slot = document.createElement('div');
+
+    Object.assign(slot.style, {
+      position: 'absolute',
+      top: `${rect.top}px`,
+      left: `${rect.left}px`,
+      width: `${rect.width}px`,
+      height: `${rect.height}px`,
+      boxSizing: 'border-box',
+      zIndex: '0',
+      border: 'var(--border-width-base) solid var(--border-color-base)',
+      borderRadius: '1rem',
+      background: 'var(--background-color-base)',
+      boxShadow: 'var(--box-shadow-medium)',
+    });
+
+    layer.appendChild(slot);
+    layer.appendChild(ghost);
+
+    const distance = rtl ? -(rect.right + 96) : window.innerWidth - rect.left + 96;
+    const animation = ghost.animate(
+      [
+        { transform: 'translateX(0px) rotate(0deg)' },
+        { transform: `translateX(${distance}px) rotate(${rotation}deg)` },
+      ],
+      { duration, easing, fill: 'forwards' }
+    );
+
+    return { layer, slot, animation };
+  };
+
+    const advanceStack = ({ slot, duration, easing }) => {
+    const [first, second, third] = getStackLayers();
+    const up = `translateY(-${STACK_STEP})`;
+    const options = { duration, easing, fill: 'forwards' };
+
+    return [
+      slot.animate([{ transform: `translateY(${STACK_STEP})` }, { transform: 'translateY(0)' }], options),
+      first && animate(first, [{ opacity: 0 }, { opacity: 0 }], options),
+      second && animate(second, [{ transform: 'none' }, { transform: up }], options),
+      third && animate(third, [{ transform: up, opacity: 1 }, { transform: up, opacity: 1 }], options),
+    ].filter(Boolean);
+  };
+
+  const waitForCover = (timeout = 150) =>
+    new Promise((resolve) => {
+      const start = performance.now();
+      const check = () => {
+        if (phase.value !== 'loading' || performance.now() - start >= timeout) resolve();
+        else requestAnimationFrame(check);
+      };
+      check();
     });
 
   const canAnimate = () => Boolean(cardRef.value && contentRef.value) && isLoaded.value && animationsEnabled();
@@ -99,7 +200,15 @@ export function useCardSkip({
     ghosts.delete(ghost);
   };
 
-  const advance = ({ undoable, from = 'none', duration = SKIP_DURATION, rotation = SKIP_ROTATION, backdrop = null }) => {
+  const advance = ({
+    undoable,
+    from = 'none',
+    duration = SKIP_DURATION,
+    rotation = SKIP_ROTATION,
+    axis = 'vertical',
+    easing = SKIP_EASE,
+    backdrop = null,
+  }) => {
     if (isAnimating) {
       discardGhost(backdrop);
       return;
@@ -107,16 +216,40 @@ export function useCardSkip({
 
     const skippedNumber = cardNumber.value;
     const animated = canAnimate();
+    const horizontal = axis === 'horizontal';
     let ghost = null;
     let leaving = null;
+    let exitLayer = null;
+    let stackShift = [];
 
     if (animated) {
-      ghost = createGhost('card-view__ghost--leaving');
-      leaving = animate(ghost, [{ transform: from }, { transform: getExitTransform(ghost, rotation) }], {
-        duration,
-        easing: SKIP_EASE,
-        fill: 'forwards',
-      });
+      if (horizontal) {
+        if (!backdrop) backdrop = createBackdrop();
+
+        Object.assign(backdrop.style, {
+          background: 'var(--background-color-base)',
+          borderColor: 'var(--border-color-base)',
+          opacity: '1',
+          visibility: 'visible',
+        });
+
+        let exitSlot;
+
+        ({ layer: exitLayer, slot: exitSlot, animation: leaving } = flyOffHorizontally({ rotation, duration, easing }));
+
+        isExiting.value = true;
+        isStacked.value = true;
+
+        stackShift = advanceStack({ slot: exitSlot, duration, easing });
+      } else {
+        ghost = createGhost('card-view__ghost--leaving');
+        leaving = animate(ghost, [{ transform: from }, { transform: getExitTransform(ghost, rotation, axis) }], {
+          duration,
+          easing,
+          fill: 'forwards',
+        });
+      }
+
       leaving.finished
         .then(() => showToast(undoable ? translate('card-skipped', skippedNumber) : null))
         .catch(() => {});
@@ -126,11 +259,17 @@ export function useCardSkip({
 
     const revealAt = performance.now() + (animated ? duration : 0);
 
-    cardNumber.value += 1;
-    isInfoOpen.value = false;
-    submission.value = null;
-    resetEdit();
-    onAdvance?.(cardNumber.value, revealAt);
+    const commit = (reveal, holdCoverUntil = 0) => {
+      cardNumber.value += 1;
+      isInfoOpen.value = false;
+      submission.value = null;
+      resetEdit();
+      onAdvance?.(cardNumber.value, reveal, holdCoverUntil);
+    };
+
+    const deferred = animated && horizontal;
+
+    if (!deferred) commit(revealAt);
 
     if (!animated) {
       discardGhost(backdrop);
@@ -139,6 +278,48 @@ export function useCardSkip({
     }
 
     isAnimating = true;
+
+    if (horizontal) {
+      const reveal = Promise.resolve(leaving.finished)
+        .catch(() => {})
+        .then(async () => {
+          exitLayer.remove();
+          ghosts.delete(exitLayer);
+          stackShift.forEach((animation) => animation.cancel?.());
+          stackShift = [];
+
+          if (!cardRef.value) return;
+
+          commit(performance.now() + SUBMIT_REVEAL_DURATION);
+          await nextTick();
+          await waitForCover();
+          await nextTick();
+
+          const card = cardRef.value;
+          if (!card) return;
+
+          const fade = animate(card, [{ opacity: 0 }, { opacity: 1 }], {
+            duration: SUBMIT_REVEAL_DURATION,
+            easing: SUBMIT_REVEAL_EASE,
+            fill: 'backwards',
+          });
+
+          isExiting.value = false;
+
+          await fade.finished.catch(() => {});
+        });
+
+      settle([{ finished: reveal }], [exitLayer, backdrop], () => {
+        isExiting.value = false;
+      });
+
+      reveal
+        .then(() => waitForCover(5000))
+        .then(() => {
+          isStacked.value = false;
+        });
+      return;
+    }
 
     nextTick().then(() => {
       if (backdrop) {
@@ -406,6 +587,8 @@ export function useCardSkip({
 
   return {
     toast,
+    isExiting,
+    isStacked,
     advance,
     skip,
     undo,

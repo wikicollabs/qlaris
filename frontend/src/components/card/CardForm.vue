@@ -181,8 +181,9 @@ const {
 .card-view__field {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-50);
+  gap: 4px;
   padding: var(--spacing-50);
+  border: var(--border-width-base) solid transparent;
 }
 
 .card-view__label {

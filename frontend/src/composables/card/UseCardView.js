@@ -1,7 +1,7 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
 import { cdxIconError, cdxIconInfo } from '@wikimedia/codex-icons';
 import { findCategory } from '../../data/categories';
-import { translate } from '../../locale';
+import { isRtl, translate } from '../../locale';
 import {
   CARDS,
   COVER_ART_TIMEOUT,
@@ -18,7 +18,10 @@ import {
   STACK_EASE,
   STACK_STEP,
   SUBMIT_DURATION,
-  SUCCESS_DURATION,
+  SUBMIT_EXIT_DELAY,
+  SUBMIT_EXIT_DURATION,
+  SUBMIT_EXIT_EASE,
+  SUBMIT_ROTATION,
   TOAST_DURATION,
   YEAR_INPUT_ID,
   dateField,
@@ -39,6 +42,7 @@ import { useCardChanges } from './UseCardChanges';
 import { useCardDissolve } from './UseCardDissolve';
 import { useCardEditor } from './UseCardEditor';
 import { useCardExpand } from './UseCardExpand';
+import { useCardFlip } from './UseCardFlip';
 import { useCardSkip } from './UseCardSkip';
 
 export function useCardView(props, emit) {
@@ -225,7 +229,7 @@ export function useCardView(props, emit) {
     resetEdit,
     snapshotEditor,
     restoreEditor,
-    onAdvance: (number, revealAt) => loadDiscoveredItem(number, revealAt),
+    onAdvance: (number, revealAt, holdCoverUntil) => loadDiscoveredItem(number, revealAt, holdCoverUntil),
     onUndo: () => {
       navigationController?.abort();
       clearCover();
@@ -233,6 +237,8 @@ export function useCardView(props, emit) {
   });
 
   useCardDissolve({ cardRef, contentRef, phase, isPreview, submission, isBusy });
+
+  useCardFlip({ cardRef, contentRef, phase, isPreview, submission, isBusy });
 
   const preloadCoverImage = (url, signal) =>
     new Promise((resolve, reject) => {
@@ -373,7 +379,7 @@ export function useCardView(props, emit) {
     loadCard();
   };
 
-  const loadDiscoveredItem = async (number, revealAt = 0) => {
+  const loadDiscoveredItem = async (number, revealAt = 0, holdCoverUntil = 0) => {
     clearCover();
     navigationController?.abort();
 
@@ -407,6 +413,18 @@ export function useCardView(props, emit) {
         : await prepareCoverArt(id, signal);
 
       if (signal.aborted || isUnmounted) return;
+
+      const hold = holdCoverUntil - performance.now();
+
+      if (hold > 0) {
+        await new Promise((resolve) => {
+          const holdTimer = setTimeout(resolve, hold);
+          timers.push(holdTimer);
+          signal.addEventListener('abort', resolve, { once: true });
+        });
+
+        if (signal.aborted || isUnmounted) return;
+      }
 
       currentItem.value = item;
       currentCoverArt.value = coverArt;
@@ -487,7 +505,19 @@ export function useCardView(props, emit) {
     try {
       await submitContribution(controller.signal);
       submission.value = 'success';
-      timers.push(setTimeout(() => advance({ undoable: false }), SUCCESS_DURATION));
+      timers.push(
+        setTimeout(
+          () =>
+            advance({
+              undoable: false,
+              axis: 'horizontal',
+              duration: SUBMIT_EXIT_DURATION,
+              easing: SUBMIT_EXIT_EASE,
+              rotation: isRtl.value ? -SUBMIT_ROTATION : SUBMIT_ROTATION,
+            }),
+          SUBMIT_EXIT_DELAY
+        )
+      );
     } catch (err) {
       if (isUnmounted) return;
       console.error('[Qlaris] Unable to submit contribution:', err);

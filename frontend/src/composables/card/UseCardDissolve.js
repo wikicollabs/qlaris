@@ -28,6 +28,7 @@ export function useCardDissolve({ cardRef, contentRef, phase, isPreview, submiss
       const content = contentRef.value;
 
       if (!card || !content || !animationsEnabled() || isBusy()) return;
+      if ((from === 'form' && to === 'preview') || (from === 'preview' && to === 'form')) return;
 
       const ghost = createCardGhost(card, content, 'card-view__ghost--dissolve');
       ghosts.add(ghost);

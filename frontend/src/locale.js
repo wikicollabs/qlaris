@@ -1,9 +1,10 @@
-import { createApp, ref } from 'vue';
+import { computed, createApp, ref } from 'vue';
 import { createI18n } from 'vue-banana-i18n';
 import { readStorage, writeStorage } from '../utils/storage';
 
 const FALLBACK_LOCALE = 'en';
 const STORAGE_KEY = 'locale';
+const RTL_LANGUAGES = new Set(['ar', 'arc', 'ckb', 'dv', 'fa', 'he', 'ks', 'ps', 'sd', 'ug', 'ur', 'yi']);
 const LANGUAGE_PARAM = 'uselang';
 
 export const LANGUAGES = [
@@ -49,6 +50,19 @@ const clearLanguageParam = () => {
   history.replaceState(history.state, '', url);
 };
 
+const getDirection = (code) => {
+  const target = new Intl.Locale(code);
+  const direction = (target.getTextInfo?.() ?? target.textInfo)?.direction;
+  if (direction) return direction;
+
+  return RTL_LANGUAGES.has(target.language) ? 'rtl' : 'ltr';
+};
+
+const applyDocumentLocale = (code) => {
+  document.documentElement.lang = code;
+  document.documentElement.dir = getDirection(code);
+};
+
 const translators = new Map();
 
 const getTranslator = (code) => {
@@ -63,14 +77,18 @@ const getTranslator = (code) => {
 
 export const locale = ref(detectLocale());
 
-document.documentElement.lang = locale.value;
+export const direction = computed(() => getDirection(locale.value));
+
+export const isRtl = computed(() => direction.value === 'rtl');
+
+applyDocumentLocale(locale.value);
 
 export const setLocale = (tag) => {
   const code = resolveLocale(tag);
   if (!code || code === locale.value) return;
 
   locale.value = code;
-  document.documentElement.lang = code;
+  applyDocumentLocale(code);
   writeStorage(STORAGE_KEY, code);
   clearLanguageParam();
 };

@@ -1,10 +1,10 @@
 <template>
-  <section :class="['card-view', { 'card-view--loaded': isLoaded }]">
+  <section :class="['card-view', { 'card-view--loaded': isLoaded, 'card-view--exiting': isExiting || isStacked }]">
     <header class="card-view__header">
       <cdx-button weight="quiet" @click="goHome">
         <cdx-icon :icon="cdxIconHome" />
       </cdx-button>
-      <h1 v-if="isLoaded" class="card-view__title">{{ $i18n('card-title', cardNumber) }}</h1>
+      <h1 v-if="isLoaded || isExiting || isStacked" class="card-view__title">{{ $i18n('card-title', cardNumber) }}</h1>
     </header>
 
     <div class="card-view__layout">
@@ -14,7 +14,7 @@
           :class="[
             'card-view__card',
             `card-view__card--${phase}`,
-            { 'card-view__card--success': submission === 'success' },
+            { 'card-view__card--success': submission === 'success', 'card-view__card--exiting': isExiting },
           ]"
           :style="{
             '--cover-background': category.background,
@@ -154,6 +154,8 @@ const {
   isLoaded,
   isForm,
   isSubmitting,
+  isExiting,
+  isStacked,
   title,
   description,
   subtitleParts,
@@ -212,6 +214,7 @@ const {
 
 .card-view__content {
   --stack-overlap: 1rem;
+  --stack-shadow-reach: 2.5rem;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -282,6 +285,11 @@ const {
   align-items: center;
   border-color: var(--border-color-success);
   background: var(--color-success);
+}
+
+.card-view__card--exiting {
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
 .card-view__ghost {
@@ -400,16 +408,31 @@ const {
   border-top: 0;
   border-radius: 0 0 1rem 1rem;
   background: var(--background-color-base);
+  box-shadow: var(--box-shadow-medium);
+
   mask-image:
     linear-gradient(#000, #000),
     radial-gradient(circle at 100% 0, transparent calc(var(--stack-overlap) - 0.0625rem), #000 var(--stack-overlap)),
-    radial-gradient(circle at 0 0, transparent calc(var(--stack-overlap) - 0.0625rem), #000 var(--stack-overlap));
+    radial-gradient(circle at 0 0, transparent calc(var(--stack-overlap) - 0.0625rem), #000 var(--stack-overlap)),
+    linear-gradient(#000, #000),
+    linear-gradient(#000, #000),
+    linear-gradient(#000, #000);
   mask-size:
     100% calc(100% - var(--stack-overlap)),
     var(--stack-overlap) var(--stack-overlap),
-    var(--stack-overlap) var(--stack-overlap);
-  mask-position: 0 100%, 0 0, 100% 0;
+    var(--stack-overlap) var(--stack-overlap),
+    calc(100% + 2 * var(--stack-shadow-reach)) var(--stack-shadow-reach),
+    var(--stack-shadow-reach) calc(100% + 2 * var(--stack-shadow-reach)),
+    var(--stack-shadow-reach) calc(100% + 2 * var(--stack-shadow-reach));
+  mask-position:
+    0 100%,
+    0 0,
+    100% 0,
+    left calc(var(--stack-shadow-reach) * -1) bottom calc(var(--stack-shadow-reach) * -1),
+    left calc(var(--stack-shadow-reach) * -1) top calc(var(--stack-shadow-reach) * -1),
+    right calc(var(--stack-shadow-reach) * -1) top calc(var(--stack-shadow-reach) * -1);
   mask-repeat: no-repeat;
+  mask-clip: no-clip;
 }
 
 .card-view__stack--1 {
@@ -439,7 +462,9 @@ const {
 }
 
 .card-view--loaded .card-view__stack,
-.card-view--loaded .card-view__actions {
+.card-view--loaded .card-view__actions,
+.card-view--exiting .card-view__stack,
+.card-view--exiting .card-view__actions {
   visibility: visible;
 }
 
@@ -450,11 +475,7 @@ const {
 }
 
 .card-view__skip-icon {
-  color: var(--color-base);
-}
-
-.card-view__skip:disabled .card-view__skip-icon {
-  color: var(--color-disabled);
+  color: inherit;
 }
 
 .card-view__card-icon {
