@@ -105,15 +105,55 @@ export const createInitialValues = (number) => {
   };
 };
 
+let scrollLocks = 0;
+let restoreScroll = null;
+
+export const lockScroll = () => {
+  if (scrollLocks === 0) {
+    const root = document.documentElement;
+    const gutter = window.innerWidth - root.clientWidth;
+    const previous = { overflow: root.style.overflow, paddingInlineEnd: root.style.paddingInlineEnd };
+
+    root.style.overflow = 'hidden';
+    if (gutter > 0) root.style.paddingInlineEnd = `${gutter}px`;
+
+    restoreScroll = () => Object.assign(root.style, previous);
+  }
+
+  scrollLocks += 1;
+  let released = false;
+
+  return () => {
+    if (released) return;
+    released = true;
+    scrollLocks -= 1;
+
+    if (scrollLocks === 0) {
+      restoreScroll?.();
+      restoreScroll = null;
+    }
+  };
+};
+
 export const reloadPage = () => window.location.reload();
 
 export const clone = (value) => (value === undefined ? value : JSON.parse(JSON.stringify(value)));
 
 export const toRem = (pixels) => `${pixels / parseFloat(getComputedStyle(document.documentElement).fontSize)}rem`;
 
-export const getExitTransform = (element, rotation = SKIP_ROTATION) => {
-  const { top, width, height } = element.getBoundingClientRect();
+export const getExitTransform = (element, rotation = SKIP_ROTATION, axis = 'vertical') => {
+  const { top, left, width, height } = element.getBoundingClientRect();
   const angle = (Math.abs(rotation) * Math.PI) / 180;
+
+  if (axis === 'horizontal') {
+    const viewport = document.documentElement.clientWidth;
+    const reach = (width / 2) * Math.cos(angle) + (height / 2) * Math.sin(angle);
+    const center = left + width / 2;
+    const distance = rotation < 0 ? -(center + reach + SKIP_OFFSET) : viewport - center + reach + SKIP_OFFSET;
+
+    return `translateX(${toRem(distance)}) rotate(${rotation}deg)`;
+  }
+
   const lowest = (height / 2) * Math.cos(angle) + (width / 2) * Math.sin(angle);
   const distance = top + height / 2 + lowest + SKIP_OFFSET;
 
